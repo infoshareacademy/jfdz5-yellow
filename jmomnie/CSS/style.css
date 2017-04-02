@@ -18,6 +18,6 @@
     font-weight: bold;
 }
 .Menu li:Hover {
-    background-color: yellow;
-    color: blue;
+    background-color: #fff761;
+    color: #41b4d1;
 }
