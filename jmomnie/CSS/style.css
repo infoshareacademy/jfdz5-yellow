@@ -1,0 +1,23 @@
+.Container {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.Menu ul {
+     margin: 0px;
+     padding: 0px;
+ }
+.Menu li {
+    list-style: none;
+    float: left;
+    display: block;
+    width: 250px;
+    height: 80px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.Menu li:Hover {
+    background-color: yellow;
+    color: blue;
+}
