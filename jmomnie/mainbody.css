@@ -11,8 +11,10 @@
     background-color: white;
 }
 .Header {
-    height: auto;
+    height: 485px;
     background-color: white;
+    background-image: url("img/main-1000.png");
+    background-repeat: no-repeat;
 }
 .Movies {
     width: 500px;

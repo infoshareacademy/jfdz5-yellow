@@ -21,3 +21,11 @@
     background-color: #fff761;
     color: #41b4d1;
 }
+.About {
+    width: 700px;
+    position: relative;
+    left: 30px;
+    top: 75%;
+    text-align: left;
+    font-size: 1.5em;
+    background: rgba(246, 248, 32, 0.7);
