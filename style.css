@@ -2,3 +2,41 @@
     max-width: 900px;
     width: 100%;
     margin: 0 auto; }
+.newsletter {
+    background-color: yellow;
+}
+
+.person {
+    flex-direction: row;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+}
+.personflex {
+    word-break: break-all;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.person1 {
+    background-color: #ff0000;
+}
+.person2 {
+    background-color: #ffffff;
+}
+.person3 {
+    background-color: #4a3ff8;
+}
+h5 {
+    text-align: center;
+}
+
+
+.footerbg {
+    background-color: red;
+}
+.footer {
+    background-color: yellow;
+}
