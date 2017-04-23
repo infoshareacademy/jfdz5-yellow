@@ -1,24 +1,56 @@
-.container {
-    max-width: 900px;
-    width: 100%;
-    margin: 0 auto; }
+.navigation {
+ background-color: red;
+}
+header {
+background-color: #4a3ff8;
+}
+.landmarks{
+    background-color: red;
+}
+.events {
+    background-color: #4a3ff8;
+}
+.tickets{
+    background-color: aqua;
+}
+.adds {
+    background-color: brown;
+}
+.function1 {
+    background-color: gray;
+}
+.function2 {
+    background-color: darkgray;
+}
+.function3 {
+    background-color: dimgray;
+}
+.function4 {
+    background-color: #d0d324;
+}
+.function5 {
+    background-color: slategray;
+}
+.function6 {
+    background-color: lightslategrey;
+}
+.function7 {
+    background-color: dimgrey;
+}
+.function8 {
+    background-color: gray;
+}
 .newsletter {
     background-color: yellow;
 }
-
-.person {
-    flex-direction: row;
-    background-color: yellow;
-    display: flex;
-    justify-content: center;
+input {
+    width: 800px;
 }
-.personflex {
-    word-break: break-all;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+button {
+    width: 200px;
+}
+.photo {
+    text-align: center;
 }
 .person1 {
     background-color: #ff0000;
@@ -30,6 +62,9 @@
     background-color: #4a3ff8;
 }
 h5 {
+    text-align: center;
+}
+.icons{
     text-align: center;
 }
 .footerbg {
