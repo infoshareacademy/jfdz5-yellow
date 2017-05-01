@@ -11,24 +11,66 @@ h3 {
 }
 
 .landmarks{
-    background-color: red;
+    background-color: #fff612;
     text-align: center;
     padding: 5px;
+}
+
+.logo1 {
+    width: 100px;
+    height: 100px;
+    background: url("./MW_includes/atraction.svg");
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .events {
-    background-color: #4a3ff8;
+    background-color: #f87410;
     text-align: center;
     padding: 5px;
+}
+
+.logo2 {
+    width: 100px;
+    height: 100px;
+    background: url("./MW_includes/calendar.svg");
+    background-size: cover;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .tickets{
-    background-color: aqua;
+    background-color: #ff4d10;
     text-align: center;
     padding: 5px;
 }
+.logo3 {
+    width: 100px;
+    height: 100px;
+    background: url("./MW_includes/ticket.svg");
+    background-size: cover;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .adds {
-    background-color: brown;
+    background-color: #ff3408;
     text-align: center;
     padding: 5px;
+}
+.logo4 {
+    width: 100px;
+    height: 100px;
+    background: url("./MW_includes/add.svg");
+    background-size: cover;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .function1 {
     background-color: gray;
