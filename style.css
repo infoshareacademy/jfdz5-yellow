@@ -10,8 +10,13 @@ h3 {
     text-align: center;
 }
 
+section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .landmarks {
-    background-color: #fff612;
+    background-color: #ffe800;
     text-align: center;
     padding: 5px;
 }
@@ -28,7 +33,7 @@ h3 {
 }
 
 .events {
-    background-color: #f87410;
+    background-color: #f8f537;
     text-align: center;
     padding: 5px;
 }
@@ -45,7 +50,7 @@ h3 {
 }
 
 .tickets {
-    background-color: #ff4d10;
+    background-color: #fff55d;
     text-align: center;
     padding: 5px;
 }
@@ -62,7 +67,7 @@ h3 {
 }
 
 .adds {
-    background-color: #ff3408;
+    background-color: #fffa98;
     text-align: center;
     padding: 5px;
 }
