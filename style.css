@@ -6,17 +6,29 @@ header .backgroundImage {
     background-color: #4a3ff8;
 }
 
+h3 {
+    text-align: center;
+}
+
 .landmarks{
     background-color: red;
+    text-align: center;
+    padding: 5px;
 }
 .events {
     background-color: #4a3ff8;
+    text-align: center;
+    padding: 5px;
 }
 .tickets{
     background-color: aqua;
+    text-align: center;
+    padding: 5px;
 }
 .adds {
     background-color: brown;
+    text-align: center;
+    padding: 5px;
 }
 .function1 {
     background-color: gray;
