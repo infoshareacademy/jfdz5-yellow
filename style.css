@@ -1,11 +1,9 @@
 .navigation {
  background-color: red;
 }
-
 header .backgroundImage {
     background-color: #4a3ff8;
 }
-
 .landmarks{
     background-color: red;
 }
@@ -61,17 +59,45 @@ button {
     background-color: #ffffff;
 }
 .person3 {
-    background-color: #4a3ff8;
+    background-color: white;
+}
+.img-circle {
+    border-radius: 50%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.img-circle:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 h5 {
     text-align: center;
 }
+.person-bold {
+    font-weight: bold;
+    color: black;
+}
 .icons{
     text-align: center;
+}
+.fa{
+    color: black;
+}
+.fa-linkedin-square:hover{
+    color: #007bb5;
+}
+.fa-instagram:hover {
+    color: #bc2a8d;
+}
+.fa-facebook-square:hover {
+    color: #3b5998;
 }
 .footerbg {
     background-color: red;
 }
 .footer {
     background-color: yellow;
+    font-size:36px
 }
