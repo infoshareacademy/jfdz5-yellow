@@ -55,17 +55,12 @@ header .backgroundImage {
 }
 
 .newsletter {
-    background-color: yellow;
+    background-color: red;
+    text-align: center;
 }
-
 input {
-    width: 800px;
+    width: 300px;
 }
-
-button {
-    width: 200px;
-}
-
 .photo {
     text-align: center;
 }
