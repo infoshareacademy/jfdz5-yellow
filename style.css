@@ -54,25 +54,22 @@ header .backgroundImage {
     background-color: gray;
 }
 
+/*STYLE KUBA POCZATEK*/
+
 .newsletter {
-    background-color: red;
+    background-color: lightgrey;
     text-align: center;
-    padding: 2em 0em 2em 0em;
+    padding: 2em 0 2em 0;
 }
-
-input {
-    width: 500px;
-}
-
 input[type=submit] {
     background-color: white;
     color: black;
-    border: 2px solid #555555;
-    padding: 16px 32px;
+    border: 2px solid red;
+    padding: 1em 2em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1em;
     margin: 4px 2px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -80,68 +77,68 @@ input[type=submit] {
     width: 500px;
 }
 
+@media screen and (max-width: 550px) {
+    input[type=submit] {
+        width: 90%;
+    }
+}
 input[type=submit]:hover {
-    background-color: #555555;
+    background-color: red;
     color: white;
 }
-
 .photo {
     text-align: center;
 }
-
 .person1 {
     background-color: white;
 }
-
 .person2 {
     background-color: white;
 }
-
 .person3 {
     background-color: white;
 }
-
 .img-circle {
     border-radius: 50%;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     -webkit-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
+    margin-top: 1em;
 }
-
 .img-circle:hover {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
 }
-
 h5 {
     text-align: center;
 }
 
-.person-bold {
+.text-bold {
     font-weight: bold;
     color: black;
 }
-
 .icons {
     text-align: center;
 }
-
 .fa {
     color: black;
 }
 
+.fa-envelope:hover {
+    color: darkblue;
+}
 .fa-linkedin-square:hover {
     color: #007bb5;
 }
-
 .fa-instagram:hover {
     color: #bc2a8d;
 }
-
 .fa-facebook-square:hover {
     color: #3b5998;
 }
+
+/*STYLE KUBA KONIEC*/
 
 .footerbg {
     background-color: red;

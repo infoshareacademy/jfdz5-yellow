@@ -45,6 +45,7 @@
         </div>
     </header>
 
+
     <main>
         <section>
             <div class="row">
@@ -67,128 +68,165 @@
             </div>
         </section>
 
-        <section>
-            <div class="row">
-                <div class="col-sm-6 function1">
-                    <h4>Atrakcje turystyczne</h4>
-                    <p></p>
-                </div>
-                <div class="col-sm-6 function2"><h4>Wydarzenia</h4>
-                    <p></p></div>
-            </div>
 
-            <div class="row">
-                <div class="col-sm-6 function3">
-                    <h4>Kup bilet</h4>
-                    <p></p>
-                </div>
+        <!--POCZATEK CZESCI KUBA-->
+        <div>
+            <section class="container">
 
-                <div class="col-sm-6 function4">
-                    <h4>Dodaj wydarzenie</h4>
-                    <p></p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 function5">
-                    <h4>Pokaż na mapie</h4>
-                    <p></p>
-                </div>
-                <div class="col-sm-6 function6">
-                    <h4>Podziel się ze znajomymi</h4>
-                    <p></p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 function7"><h4>Zaproponuj podobne</h4>
-                    <p></p>
-                </div>
-                <div class="col-sm-6 function8"><h4>Pokaż pogodę</h4>
-                    <p></p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="row newsletter">
-                <div class="col-sm-12">
-                    <h3>Zapisz się do Newslettera !</h3>
-                    <p>Powiadomimy Cię gdy nasza strona wystartuje, wystarczy żę podasz swoje imię i email :)</p>
-
-                    <form action="/submit_page.php">
-
-                        <label for="firstname">Imię: </label>
-                        <input type="text" id="firstname" required>
-
-                        <label for="email">E-mail: </label>
-                        <input type="email" id="email" name="usremail" required><br>
-
-                        <input type="submit" value="Zapisz się"
-                               onclick="alert('Dziękujemy za zapisanie się ! Jesteśmy w kontakcie !')">
-
-                    </form>
-
-
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="row">
-
-                <div class="col-sm-4 person1">
-                    <div class="photo">
-                        <img class="img-circle" src="img/magdalenaw.jpg" alt="Magda" height="200px" width="200px">
+                <div class="row">
+                    <div class="col-sm-6 function1">
+                        <h4>Atrakcje turystyczne</h4>
+                        <p></p>
                     </div>
-                    <h5 class="person-bold">Magdalena Wojnicka</h5>
-                    <ul>
-                        <li>Projektant / kierownik projektów</li>
-                        <li>Kocham wszystko, co proste, piękne i funkcjonalne.</li>
-                        <li>Uwielbiam się uczyć, rozwijać i dążyć do celu.</li>
-                    </ul>
-                    <div class="icons">
-                        <a href="https://pl.linkedin.com/in/michalakjakub">
-                            <i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
-                        <i class="fa fa-instagram" style="font-size:36px"></i>
-                        <i class="fa fa-facebook-square" style="font-size:36px"></i>
+
+                    <div class="col-sm-6 function2"><h4>Wydarzenia</h4>
+                        <p></p></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 function3">
+                        <h4>Kup bilet</h4>
+                        <p></p>
+                    </div>
+
+                    <div class="col-sm-6 function4">
+                        <h4>Dodaj wydarzenie</h4>
+                        <p></p>
                     </div>
                 </div>
 
-                <div class="col-sm-4 person2">
-                    <div class="photo">
-                        <img class="img-circle" src="img/katarzynas.jpg" alt="Kasia" height="200px" width="200px">
+                <div class="row">
+                    <div class="col-sm-6 function5">
+                        <h4>Pokaż na mapie</h4>
+                        <p></p>
                     </div>
 
-                    <h5>Katarzyna Sitarz</h5>
-                    <ul>
-                        <li>Jestem wesoła</li>
-                    </ul>
+                    <div class="col-sm-6 function6">
+                        <h4>Podziel się ze znajomymi</h4>
+                        <p></p>
+                    </div>
                 </div>
 
-                <div class="col-sm-4 person3">
-                    <div class="photo">
-                        <img class="img-circle" src="img/jakubm.jpg" alt="Kuba" height="200px" width="200px">
+                <div class="row">
+                    <div class="col-sm-6 function7"><h4>Zaproponuj podobne</h4>
+                        <p></p>
                     </div>
-                    <div class="person3">
-                        <h5 class="person-bold">Jakub Michalak</h5>
+                    <div class="col-sm-6 function8"><h4>Pokaż pogodę</h4>
+                        <p></p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="newsletter">
+            <section class="container">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <h3 class="text-bold">Zapisz się do Newslettera !</h3>
+                        <p>Powiadomimy Cię gdy nasza strona wystartuje, wystarczy żę podasz swoje imię i email :)</p>
+
+                        <form action="/submit_page.php">
+
+                            <div class="form-group row">
+
+                                <label for="firstname" class="col-sm-1 col-xs-2 col-form-label">Imię: </label>
+                                <div class="col-sm-5 col-xs-10">
+                                    <input type="text" class="form-control" id="firstname" placeholder="Imię" required>
+                                </div>
+
+                                <label for="email" class="col-sm-1 col-xs-2 col-form-label">Email: </label>
+                                <div class="col-sm-5 col-xs-10">
+                                    <input type="email" class="form-control" id="email" placeholder="Email"
+                                           name="usremail" required>
+                                </div>
+                            </div>
+
+                            <input type="submit" value="Zapisz się"
+                                   onclick="alert('Dziękujemy za zapisanie się ! Jesteśmy w kontakcie !')">
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div>
+            <section class="container">
+                <div class="row">
+
+                    <div class="col-sm-4 person1">
+                        <div class="photo">
+                            <img class="img-circle" src="img/magdalenaw.jpg" alt="Magda" height="200px" width="200px">
+                        </div>
+                        <h5 class="text-bold">Magdalena Wojnicka</h5>
                         <ul>
-                            <li>To mój pierwszy projekt www</li>
-                            <li>Z wykształcenia jestem mgr inż. budownictwa</li>
-                            <li>W wolnym czasie gram we frisbee, tenis, biegam, a także interesuję się lotnictwem</li>
+                            <li>Projektant / kierownik proj ektów</li>
+                            <li>Kocham wszystko, co proste, piękne i funkcjonalne.</li>
+                            <li>Uwielbiam się uczyć, rozwijać i dążyć do celu.</li>
                         </ul>
                         <div class="icons">
+                            <a href="mailto:michalak_jakub@yahoo.pl">
+                                <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
                             <a href="https://pl.linkedin.com/in/michalakjakub">
-                                <i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
-                            <i class="fa fa-instagram" style="font-size:36px"></i>
-                            <i class="fa fa-facebook-square" style="font-size:36px"></i>
+                                <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
+                            <i class="fa fa-instagram" style="font-size:2.25em"></i>
+                            <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
                         </div>
                     </div>
-                </div>
 
-            </div>
-        </section>
+                    <div class="col-sm-4 person2">
+                        <div class="photo">
+                            <img class="img-circle" src="img/katarzynas.jpg" alt="Kasia" height="200px" width="200px">
+                        </div>
+
+                        <h5 class="text-bold">Katarzyna Sitarz</h5>
+                        <ul>
+                            <li>filolożka klasyczna</li>
+                            <li>nałogowa konsumentka estetyki</li>
+                            <li>koneserka przyjemności, niezależnie od ich rozmiarów</li>
+                        </ul>
+                        <div class="icons">
+                            <a href="mailto:michalak_jakub@yahoo.pl">
+                                <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
+                            <a href="https://pl.linkedin.com/in/michalakjakub">
+                                <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
+                            <i class="fa fa-instagram" style="font-size:2.25em"></i>
+                            <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 person3">
+                        <div class="photo">
+                            <img class="img-circle" src="img/jakubm.jpg" alt="Kuba" height="200px" width="200px">
+                        </div>
+                        <div class="person3">
+                            <h5 class="text-bold">Jakub Michalak</h5>
+                            <ul>
+                                <li>To mój pierwszy projekt www</li>
+                                <li>Z wykształcenia jestem mgr inż. budownictwa</li>
+                                <li>W wolnym czasie gram we frisbee, tenis, biegam, a także interesuję się lotnictwem
+                                </li>
+                            </ul>
+                            <div class="icons">
+                                <a href="mailto:michalak_jakub@yahoo.pl">
+                                    <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
+                                <a href="https://pl.linkedin.com/in/michalakjakub">
+                                    <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
+                                <i class="fa fa-instagram" style="font-size:2.25em"></i>
+                                <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <!--KONIEC CZESCI KUBA-->
+
     </main>
+
 
     <footer>
         <div class="row footerbg">
