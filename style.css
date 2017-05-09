@@ -86,6 +86,12 @@ input[type=submit]:hover {
     background-color: red;
     color: white;
 }
+
+.safety-info {
+    font-size: 0.75em;
+    font-style: italic;
+}
+
 .photo {
     text-align: center;
 }
