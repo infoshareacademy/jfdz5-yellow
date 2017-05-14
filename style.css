@@ -44,7 +44,7 @@ header h1 {
     padding: 1% 0 1% 0;
     }
 
-#input {
+.input {
     padding-top:5%;
     padding-bottom: 5%;
 }
@@ -82,15 +82,20 @@ header h2 {
     filter: alpha(opacity=100);
     color: white;
 }
+
+.button a {
+    color: white;
+    text-decoration: none;
+}
 /*** Kasia - koniec headera ***/
 
 /** Magda - początek mainFunctions**/
 
-#mainFunctions {
+.mainFunctions {
     background-color: white;
 }
 
-#mainFunctions h3 {
+.mainFunctions h3 {
     text-align: center;
 }
 
@@ -271,6 +276,8 @@ input[type=submit]:hover {
     -webkit-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
     margin-top: 1em;
+    height: 150px;
+    width: 150px;
 }
 .img-circle:hover {
     -webkit-filter: grayscale(0);
