@@ -115,9 +115,16 @@ h5 {
 .icons{
     text-align: center;
 }
-.footerbg {
-    background-color: red;
-}
+
+
 .footer {
-    background-color: yellow;
+    background-color: seashell;
+    padding: 1% 0 1% 0;
+    text-align: center;
+   }
+
+.footer h6 {
+    color: black;
+    font-size: 0.75em;
+    font-weight: 600;
 }
