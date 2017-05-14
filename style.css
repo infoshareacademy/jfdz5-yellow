@@ -30,7 +30,7 @@ nav .navbar-brand{
 /*** Kasia header***/
 .backgroundImage {
     height: 100%;
-    background-image: url("http://www.blogzmiasta.pl/wp-content/uploads/2015/03/barth1003.jpg");
+    background-image: url("img/pano.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -218,7 +218,7 @@ header h2 {
 }
 
 .newsletter {
-    background-color: #fffa98;
+    background-color: lightseagreen;
     text-align: center;
     padding: 2em 0 2em 0;
 }
