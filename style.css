@@ -1,6 +1,7 @@
 /*** Kasia ***/
 body {
     padding-top: 50px;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -40,6 +41,8 @@ nav .navbar-brand{
 header h1 {
     background-color: rgba(255, 255, 255, 0.3);
     color: seashell;
+    margin: 3% 0 3% 0;
+    padding: 1% 0 1% 0;
     }
 
 #input {
@@ -51,7 +54,9 @@ header h1 {
 header h2 {
     font-size: 1.5em;
     color: #fcf2eb;
-    background-color: rgba(166, 166, 166, 0.3);
+    background-color: rgba(166, 166, 166, 0.7);
+    margin: 3% 0 3% 0;
+    padding: 1% 0 1% 0;
 }
 
 .button {
@@ -83,10 +88,7 @@ header h2 {
 /** Magda - początek mainFunctions**/
 
 #mainFunctions {
-    width: 100%;
-    clear: both;
-    height: 100%;
-    overflow: hidden;
+    background-color: rgb(211,211,211);
 }
 
 #mainFunctions h3 {
@@ -239,6 +241,10 @@ input[type=submit]:hover {
     font-style: italic;
 }
 
+.onas {
+    padding-bottom: 1%;
+}
+
 .photo {
     text-align: center;
 }
@@ -294,7 +300,7 @@ h5 {
 /*** Kasia footer ***/
 
 .footer {
-    background-color: seashell;
+    background-color:  #fffa98;
     padding: 1% 0 1% 0;
     text-align: center;
    }
