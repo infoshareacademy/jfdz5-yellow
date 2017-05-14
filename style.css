@@ -6,9 +6,24 @@ body {
 
 /*** Kasia navbar ***/
 
-.navbar-default {
+nav .navbar-default {
     background-color: seashell;
-   box-shadow: 1px 2px 4px rgba(255, 245, 238, 0.5);
+    box-shadow: 2px 4px 6px rgba(255, 245, 238, 0.8);
+    padding-top: 0;
+    }
+
+
+nav .navbar-collapse {
+    box-shadow: 2px 4px 6px rgba(255, 245, 238, 0.8);
+}
+
+nav .link {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+nav .navbar-brand{
+    padding-top: 0px;
 }
 /*** koniec navbara ***/
 
@@ -64,19 +79,26 @@ header h2 {
     color: white;
 }
 /*** Kasia - koniec headera ***/
-h3 {
+
+/** Magda - początek mainFunctions**/
+
+#mainFunctions {
+    width: 100%;
+    clear: both;
+    height: 100%;
+    overflow: hidden;
+}
+
+#mainFunctions h3 {
     text-align: center;
 }
 
-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 
 .landmarks {
     background-color: #ffe800;
     text-align: center;
     padding: 5px;
+    height: 100%;
 }
 
 .logo1 {
@@ -94,6 +116,7 @@ section {
     background-color: #f8f537;
     text-align: center;
     padding: 5px;
+    height: 100%;
 }
 
 .logo2 {
@@ -111,6 +134,7 @@ section {
     background-color: #fff55d;
     text-align: center;
     padding: 5px;
+    height: 100%;
 }
 
 .logo3 {
@@ -128,6 +152,7 @@ section {
     background-color: #fffa98;
     text-align: center;
     padding: 5px;
+    height: 100%;
 }
 
 .logo4 {
@@ -141,29 +166,39 @@ section {
     margin-bottom: 50px;
 }
 
+/** Magda - koniec mainFunctions**/
+
 .function1 {
     background-color: gray;
+    text-align: center;
 }
 .function2 {
     background-color: darkgray;
+    text-align: center;
 }
 .function3 {
     background-color: dimgray;
+    text-align: center;
 }
 .function4 {
-    background-color: #d0d324;
+    background-color: #d0d324 ;
+    text-align: center;
 }
 .function5 {
     background-color: slategray;
+    text-align: center;
 }
 .function6 {
     background-color: lightslategrey;
+    text-align: center;
 }
 .function7 {
     background-color: dimgrey;
+    text-align: center;
 }
 .function8 {
     background-color: gray;
+    text-align: center;
 }
 
 /*STYLE KUBA POCZATEK*/
