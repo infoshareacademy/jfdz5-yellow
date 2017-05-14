@@ -1,6 +1,16 @@
-.navigation {
- background-color: red;
+body {
+    padding-top: 50px;
 }
+
+
+/*** navbar ***/
+
+.navbar-default {
+    background-color: seashell;
+   box-shadow: 1px 2px 4px rgba(255, 245, 238, 0.5);
+}
+/*** koniec navbara ***/
+
 
 header .backgroundImage {
     background-color: #4a3ff8;
