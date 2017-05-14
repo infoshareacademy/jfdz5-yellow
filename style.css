@@ -2,16 +2,14 @@
  background-color: red;
 }
 
-/*header {*/
-    /*height: 300px;*/
-/*}*/
-
 .backgroundImage {
     height: 100%;
     background-image: url("http://www.blogzmiasta.pl/wp-content/uploads/2015/03/barth1003.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
+    /*box-shadow:inset 0 0 2em 1em #ffffff;*/
     }
 
 header h1 {
