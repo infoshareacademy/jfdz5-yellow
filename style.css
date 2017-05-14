@@ -4,7 +4,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-
 /*** Kasia navbar ***/
 
 nav .navbar-default {
@@ -95,12 +94,21 @@ header h2 {
     text-align: center;
 }
 
+.funmain {
+    text-align: center;
+    height: 425px;
+    border-width: 15px 5px;
+    border-style: solid;
+    border-color: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .landmarks {
     background-color: lightblue;
-    text-align: center;
-    padding: 5px;
-    height: 390px;
 }
 
 .logo1 {
@@ -116,9 +124,6 @@ header h2 {
 
 .events {
     background-color: #b0ddeb;
-    text-align: center;
-    padding: 5px;
-    height: 390px;
 }
 
 .logo2 {
@@ -134,9 +139,6 @@ header h2 {
 
 .tickets {
     background-color: #b3e2f0;
-    text-align: center;
-    padding: 5px;
-    height: 390px;
 }
 
 .logo3 {
@@ -152,9 +154,6 @@ header h2 {
 
 .adds {
     background-color: #b8e7f5;
-    text-align: center;
-    padding: 5px;
-    height: 390px;
 }
 
 .logo4 {
@@ -170,59 +169,51 @@ header h2 {
 
 /** Magda - koniec mainFunctions**/
 
-.function1 {
-    background-color: gray;
+.funsecond {
     text-align: center;
-    padding: 5px;
     height: 180px;
+    border-width: 15px 15px 0px 5px;
+    border-style: solid;
+    border-color: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.function1 {
+    background-color: #b0ddeb;
 }
 .function2 {
-    background-color: darkgray;
-    text-align: center;
-    padding: 5px;
-    height: 180px;
+    background-color: #b0ddeb;
 }
 .function3 {
-    background-color: dimgray;
-    text-align: center;
-    padding: 5px;
-    height: 180px;
+    background-color: #b0ddeb;
 }
 .function4 {
-    background-color: #d0d324 ;
-    text-align: center;
-    padding: 5px;
-    height: 180px;
+    background-color: #b0ddeb;
 }
 .function5 {
-    background-color: slategray;
-    text-align: center;
-    padding: 5px;
-    height: 180px;
+    background-color: #b0ddeb;
 }
 .function6 {
-    background-color: lightslategrey;
-    text-align: center;
-    padding: 5px;
-    height: 180px;
+    background-color: #b0ddeb;
 }
 .function7 {
-    background-color: dimgrey;
-    text-align: center;
-    padding: 5px;
-    height: 180px;
+    background-color: #b0ddeb;
 }
 .function8 {
-    background-color: gray;
-    text-align: center;
-    padding: 5px;
-    height: 180px;
+    background-color: #b0ddeb;
 }
 
 /*STYLE KUBA POCZATEK*/
 
+.newsletter label {
+    line-height: 30px;
+}
+
 .newsletter {
-    background-color: lightblue;
+    background-color: #fffa98;
     text-align: center;
     padding: 2em 0 2em 0;
 }
