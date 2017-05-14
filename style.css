@@ -69,7 +69,7 @@ header h2 {
     height: 50px;
     border: 2px solid seashell;
     border-radius: 40px;
-    background: #0e83cd;
+    background: red;
     cursor: pointer;
     text-align:center;
     text-transform: uppercase;
@@ -88,7 +88,7 @@ header h2 {
 /** Magda - początek mainFunctions**/
 
 #mainFunctions {
-    background-color: rgb(211,211,211);
+    background-color: white;
 }
 
 #mainFunctions h3 {
@@ -97,10 +97,10 @@ header h2 {
 
 
 .landmarks {
-    background-color: #ffe800;
+    background-color: lightblue;
     text-align: center;
     padding: 5px;
-    height: 100%;
+    height: 390px;
 }
 
 .logo1 {
@@ -115,10 +115,10 @@ header h2 {
 }
 
 .events {
-    background-color: #f8f537;
+    background-color: #b0ddeb;
     text-align: center;
     padding: 5px;
-    height: 100%;
+    height: 390px;
 }
 
 .logo2 {
@@ -133,10 +133,10 @@ header h2 {
 }
 
 .tickets {
-    background-color: #fff55d;
+    background-color: #b3e2f0;
     text-align: center;
     padding: 5px;
-    height: 100%;
+    height: 390px;
 }
 
 .logo3 {
@@ -151,10 +151,10 @@ header h2 {
 }
 
 .adds {
-    background-color: #fffa98;
+    background-color: #b8e7f5;
     text-align: center;
     padding: 5px;
-    height: 100%;
+    height: 390px;
 }
 
 .logo4 {
@@ -173,40 +173,56 @@ header h2 {
 .function1 {
     background-color: gray;
     text-align: center;
+    padding: 5px;
+    height: 180px;
 }
 .function2 {
     background-color: darkgray;
     text-align: center;
+    padding: 5px;
+    height: 180px;
 }
 .function3 {
     background-color: dimgray;
     text-align: center;
+    padding: 5px;
+    height: 180px;
 }
 .function4 {
     background-color: #d0d324 ;
     text-align: center;
+    padding: 5px;
+    height: 180px;
 }
 .function5 {
     background-color: slategray;
     text-align: center;
+    padding: 5px;
+    height: 180px;
 }
 .function6 {
     background-color: lightslategrey;
     text-align: center;
+    padding: 5px;
+    height: 180px;
 }
 .function7 {
     background-color: dimgrey;
     text-align: center;
+    padding: 5px;
+    height: 180px;
 }
 .function8 {
     background-color: gray;
     text-align: center;
+    padding: 5px;
+    height: 180px;
 }
 
 /*STYLE KUBA POCZATEK*/
 
 .newsletter {
-    background-color: lightgrey;
+    background-color: lightblue;
     text-align: center;
     padding: 2em 0 2em 0;
 }
