@@ -119,6 +119,7 @@ header h2 {
 
 .landmarks {
     background-color: lightblue;
+    transition: all 1s ease;
 }
 
 .landmarks:hover {
@@ -126,7 +127,7 @@ header h2 {
     background: url("MW_includes/Zbrojownia.jpg");
     background-size: cover;
     color: transparent;
-
+    opacity: 0.5;
 }
 
 .logoLandmarks {
@@ -140,6 +141,7 @@ header h2 {
 
 .events {
     background-color: #b0ddeb;
+    transition: all 1s ease;
 }
 
 .events:hover {
@@ -147,6 +149,7 @@ header h2 {
     background: url("MW_includes/ScenaMuzy.jpg");
     background-size: cover;
     color: transparent;
+    opacity: 0.5;
 }
 
 .logoEvents {
@@ -158,8 +161,11 @@ header h2 {
     margin: auto;
 }
 
+
+
 .tickets {
     background-color: #b3e2f0;
+    transition: all 1s ease;
 }
 
 .tickets:hover {
@@ -167,6 +173,7 @@ header h2 {
     background: url("MW_includes/Crane.jpg");
     background-size: cover;
     color: transparent;
+    opacity: 0.5;
 }
 
 .logoTickets {
@@ -180,6 +187,7 @@ header h2 {
 
 .adds {
     background-color: #b8e7f5;
+    transition: all 1s ease;
 }
 
 .adds:hover {
@@ -187,6 +195,7 @@ header h2 {
     background: url("MW_includes/Zaspa.jpg");
     background-size: cover;
     color: transparent;
+    opacity: 0.5;
 }
 
 .logoAdds {
