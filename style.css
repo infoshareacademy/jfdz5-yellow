@@ -12,7 +12,6 @@ nav .navbar-default {
     padding-top: 0;
     }
 
-
 nav .navbar-collapse {
     box-shadow: 2px 4px 6px rgba(255, 245, 238, 0.8);
 }
@@ -161,8 +160,6 @@ header h2 {
     margin: auto;
 }
 
-
-
 .tickets {
     background-color: #b3e2f0;
     transition: all 1s ease;
@@ -209,6 +206,8 @@ header h2 {
 
 /** Magda - koniec mainFunctions**/
 
+/*STYLE KUBA POCZATEK*/
+
 .funsecond {
     text-align: center;
     height: 180px;
@@ -246,7 +245,6 @@ header h2 {
     background-color: #b0ddeb;
 }
 
-/*STYLE KUBA POCZATEK*/
 
 .newsletter label {
     line-height: 30px;
@@ -254,7 +252,7 @@ header h2 {
 }
 
 .newsletter {
-    background-color: #384498;
+    background-color: #065498;
     color: white;
     text-align: center;
     padding: 2em 0 2em 0;
