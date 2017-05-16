@@ -381,8 +381,9 @@ h5 {
 /*** Kasia footer ***/
 
 .footer {
-    background-color: #fff22a;
-    padding: 1% 0 1% 0;
+    background: url("MW_includes/145px_icon_yellow.png");
+    background-repeat: repeat-x;
+    padding: 0.7% 0 0.7% 0;
     text-align: center;
    }
 
