@@ -117,7 +117,7 @@ header h2 {
 }
 
 .landmarks {
-    background-color: lightblue;
+    background-color: #b8e5f2;
     transition: all 1s ease;
 }
 
@@ -139,7 +139,7 @@ header h2 {
 }
 
 .events {
-    background-color: #b0ddeb;
+    background-color: #b6e4f2;
     transition: all 1s ease;
 }
 
@@ -161,7 +161,7 @@ header h2 {
 }
 
 .tickets {
-    background-color: #b3e2f0;
+    background-color: #b6e5f2;
     transition: all 1s ease;
 }
 
@@ -183,7 +183,7 @@ header h2 {
 }
 
 .adds {
-    background-color: #b8e7f5;
+    background-color: #bbe7f2;
     transition: all 1s ease;
 }
 
@@ -220,29 +220,61 @@ header h2 {
     align-items: center;
     flex-direction: column;
 }
-.function1 {
-    background-color: #b0ddeb;
+.function1Landmarks {
+    background-color: #acd8e6;
+    transition: all 1s ease;
 }
-.function2 {
-    background-color: #b0ddeb;
+.function1Landmarks:hover {
+    background-color: #ffffff;
 }
-.function3 {
-    background-color: #b0ddeb;
+.function2Events {
+    background-color: #acd8e6;
+    transition: all 1s ease;
 }
-.function4 {
-    background-color: #b0ddeb;
+.function2Events:hover {
+    background-color: #ffffff;
 }
-.function5 {
-    background-color: #b0ddeb;
+.function3Tickets {
+    background-color: #acd8e6;
+    transition: all 1s ease;
 }
-.function6 {
-    background-color: #b0ddeb;
+.function3Tickets:hover {
+    background-color: #ffffff;
 }
-.function7 {
-    background-color: #b0ddeb;
+.function4Adds {
+    background-color: #acd8e6;
+    transition: all 1s ease;
 }
-.function8 {
-    background-color: #b0ddeb;
+.function4Adds:hover {
+    background-color: #ffffff;
+}
+.function5Map {
+    background-color: #acd8e6;
+    transition: all 1s ease;
+}
+.function5Map:hover {
+    background-color: #ffffff;
+}
+.function6Share {
+    background-color: #acd8e6;
+    transition: all 1s ease;
+}
+.function6Share:hover {
+    background-color: #ffffff;
+}
+.function7Similar {
+    background-color: #acd8e6;
+    transition: all 1s ease;
+}
+.function7Similar:hover {
+    background-color: #ffffff;
+}
+.function8Weather {
+    background-color: #acd8e6;
+    transition: all 1s ease;
+}
+.function8Weather:hover {
+    background-color: #ffffff;
 }
 
 
@@ -324,7 +356,7 @@ h5 {
 
 .text-bold {
     font-weight: bold;
-    color: black;
+    color: red;
 }
 .icons {
     text-align: center;
@@ -349,7 +381,7 @@ h5 {
 /*** Kasia footer ***/
 
 .footer {
-    background-color:  #fffa98;
+    background-color: #fff22a;
     padding: 1% 0 1% 0;
     text-align: center;
    }
