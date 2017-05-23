@@ -124,9 +124,10 @@ header h2 {
 .landmarks:hover {
     background: url("MW_includes/Neptun.jpg");
     background: url("MW_includes/Zbrojownia.jpg");
+    background: url("MW_includes/NeptunNoca.jpg");
     background-size: cover;
-    color: transparent;
-    opacity: 0.5;
+    color: white;
+    opacity: 0.9;
 }
 
 .logoLandmarks {
@@ -147,8 +148,8 @@ header h2 {
     background: url("MW_includes/DlugaStreet.jpg");
     background: url("MW_includes/ScenaMuzy.jpg");
     background-size: cover;
-    color: transparent;
-    opacity: 0.5;
+    color: white;
+    opacity: 0.8;
 }
 
 .logoEvents {
@@ -168,9 +169,10 @@ header h2 {
 .tickets:hover {
     background: url("MW_includes/MuseumWWII.jpg");
     background: url("MW_includes/Crane.jpg");
+    background: url("MW_includes/MuseumWWIIpion.jpg");
     background-size: cover;
-    color: transparent;
-    opacity: 0.5;
+    color: white;
+    opacity: 0.9;
 }
 
 .logoTickets {
@@ -191,8 +193,8 @@ header h2 {
     background: url("MW_includes/Stadion.jpg");
     background: url("MW_includes/Zaspa.jpg");
     background-size: cover;
-    color: transparent;
-    opacity: 0.5;
+    color: white;
+    opacity: 0.8;
 }
 
 .logoAdds {
