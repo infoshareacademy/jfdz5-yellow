@@ -8,17 +8,15 @@ body {
 
 nav .navbar-default {
     background-color: seashell;
-    box-shadow: 2px 4px 6px rgba(255, 245, 238, 0.8);
     padding-top: 0;
     }
 
-nav .navbar-collapse {
-    box-shadow: 2px 4px 6px rgba(255, 245, 238, 0.8);
-}
+
 
 nav .link {
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 600;
+    letter-spacing: 1pt;
 }
 
 nav .navbar-brand {
@@ -46,6 +44,8 @@ header h1 {
     color: seashell;
     margin: 3% 0 3% 0;
     padding: 1% 0 1% 0;
+    letter-spacing: 3pt;
+    word-spacing: 5pt;
     }
 
 .input {
