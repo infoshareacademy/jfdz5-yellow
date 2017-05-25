@@ -122,8 +122,6 @@ header h2 {
 }
 
 .landmarks:hover {
-    background: url("MW_includes/Neptun.jpg");
-    background: url("MW_includes/Zbrojownia.jpg");
     background: url("MW_includes/NeptunNoca.jpg");
     background-size: cover;
     color: white;
@@ -145,7 +143,6 @@ header h2 {
 }
 
 .events:hover {
-    background: url("MW_includes/DlugaStreet.jpg");
     background: url("MW_includes/ScenaMuzy.jpg");
     background-size: cover;
     color: white;
@@ -167,8 +164,6 @@ header h2 {
 }
 
 .tickets:hover {
-    background: url("MW_includes/MuseumWWII.jpg");
-    background: url("MW_includes/Crane.jpg");
     background: url("MW_includes/MuseumWWIIpion.jpg");
     background-size: cover;
     color: white;
@@ -190,7 +185,6 @@ header h2 {
 }
 
 .adds:hover {
-    background: url("MW_includes/Stadion.jpg");
     background: url("MW_includes/Zaspa.jpg");
     background-size: cover;
     color: white;
@@ -281,7 +275,7 @@ header h2 {
 
 
 .newsletter label {
-    line-height: 30px;
+    line-height: 25px;
     color: white;
 }
 
