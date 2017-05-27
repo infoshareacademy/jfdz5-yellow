@@ -54,7 +54,10 @@
             </div>
             <div class="row">
                 <div class="col-sm-12 input">
-                    <button class="button"><a href="#newsletter">Baw się z nami!</a></button>
+                    <form>
+                        <input class="button" type="button" value="Baw się z nami!"
+                        onclick="window.location.href='#newsletter'" />
+                    </form>
                 </div>
             </div>
             <div class="row">
@@ -105,12 +108,12 @@
         <!-- Magda - koniec sekcji mainFunctions -->
 
         <!-- Kuba - początek Newsletter -->
-        <div class="newsletter">
+        <div class="newsletter" id="newsletter">
             <section class="container">
                 <div class="row">
 
                     <div class="col-sm-12">
-                        <h3 class="text-bold" id="newsletter">Zapisz się do Newslettera!</h3>
+                        <h3 class="text-bold">Zapisz się do Newslettera!</h3>
                         <p>Powiadomimy Cię, gdy nasza strona wystartuje - wystarczy, że podasz swoje imię i email :)</p>
 
                         <form action="/submit_page.php">
