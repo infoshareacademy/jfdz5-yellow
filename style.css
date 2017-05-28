@@ -55,9 +55,9 @@ header h1 {
 
 
 header h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     color: #fcf2eb;
-    background-color: rgba(166, 166, 166, 0.7);
+    background-color: hsla(220, 79%, 54%, 0.61);
     margin: 3% 0 3% 0;
     padding: 1% 0 1% 0;
 }
