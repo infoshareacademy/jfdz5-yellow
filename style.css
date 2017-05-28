@@ -283,7 +283,7 @@ header h2 {
     background-color: #065498;
     color: white;
     text-align: center;
-    padding: 2em 0 2em 0;
+    padding: 3em 0 3em 0;
 }
 input[type=submit] {
     background-color: white;
@@ -352,7 +352,9 @@ h5 {
 
 .text-bold {
     font-weight: bold;
-    color: black;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 1em 0em;
 }
 .icons {
     text-align: center;
