@@ -165,7 +165,7 @@ header h2 {
 
 /*STYLE KUBA POCZATEK*/
 
-.funsecond {
+.additionalFunctions {
     text-align: center;
     height: 180px;
     border-width: 15px 15px 0px 5px;
@@ -176,79 +176,14 @@ header h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.function1Landmarks {
     background-color: #acd8e6;
     transition: all 1s ease;
 }
 
-.function1Landmarks:hover {
+.additionalFunctions:hover {
     background-color: #ffffff;
 }
 
-.function2Events {
-    background-color: #acd8e6;
-    transition: all 1s ease;
-}
-
-.function2Events:hover {
-    background-color: #ffffff;
-}
-
-.function3Tickets {
-    background-color: #acd8e6;
-    transition: all 1s ease;
-}
-
-.function3Tickets:hover {
-    background-color: #ffffff;
-}
-
-.function4Adds {
-    background-color: #acd8e6;
-    transition: all 1s ease;
-}
-
-.function4Adds:hover {
-    background-color: #ffffff;
-}
-
-.function5Map {
-    background-color: #acd8e6;
-    transition: all 1s ease;
-}
-
-.function5Map:hover {
-    background-color: #ffffff;
-}
-
-.function6Share {
-    background-color: #acd8e6;
-    transition: all 1s ease;
-}
-
-.function6Share:hover {
-    background-color: #ffffff;
-}
-
-.function7Similar {
-    background-color: #acd8e6;
-    transition: all 1s ease;
-}
-
-.function7Similar:hover {
-    background-color: #ffffff;
-}
-
-.function8Weather {
-    background-color: #acd8e6;
-    transition: all 1s ease;
-}
-
-.function8Weather:hover {
-    background-color: #ffffff;
-}
 
 .newsletter label {
     line-height: 25px;
@@ -294,11 +229,11 @@ input[type=submit]:hover {
     font-style: italic;
 }
 
-.onas {
+.about {
     padding: 0 0 3em 0;
 }
 
-.text-onas {
+.text-about {
     font-weight: bold;
     color: white;
     background-color: #065498;
@@ -311,15 +246,7 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-.person1 {
-    background-color: white;
-}
-
-.person2 {
-    background-color: white;
-}
-
-.person3 {
+.person {
     background-color: white;
 }
 
