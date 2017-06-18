@@ -330,6 +330,9 @@ h5 {
     padding-right: 15%;
     padding-left: 10px;
 }
+.cookie.hidden {
+    display: none;
+}
 
 .acceptCookie {
     width: 40px;
