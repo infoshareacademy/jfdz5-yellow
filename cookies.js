@@ -9,7 +9,7 @@ acceptClick.addEventListener('click', function (event) {
 });
 
 rejectClick.addEventListener('click', function (event) {
-    cookie.style.display = "none"
+    window.open('https://www.cookielaw.org/the-cookie-law/', "_blank");
 });
 
 var cookieValue = getCookie('cookiesAccepted2')
