@@ -315,3 +315,36 @@ h5 {
 }
 
 /*** Kasia koniec footra ***/
+
+.cookie {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 5px;
+    padding-right: 15%;
+    padding-left: 10px;
+}
+
+.acceptCookie {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    background-color: red;
+}
+.rejectCookie {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: grey;
+
+}
