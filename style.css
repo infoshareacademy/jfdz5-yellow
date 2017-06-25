@@ -23,6 +23,10 @@ nav .navbar-brand .img-responsive {
     max-height: 50px;
 }
 
+nav.hidden {
+    display: none;
+}
+
 /*** koniec navbara ***/
 /*** Kasia header***/
 .backgroundImage {
