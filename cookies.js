@@ -1,4 +1,3 @@
-
 var acceptClick = document.getElementById('acceptCookie');
 var rejectClick = document.getElementById('rejectCookie');
 var cookie = document.getElementById('cookie');
@@ -16,5 +15,3 @@ var cookieValue = getCookie('cookiesAccepted2')
 if (cookieValue !== "") {
     cookie.classList.add("hidden")
 }
-
-
