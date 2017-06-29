@@ -30,9 +30,17 @@ nav.hidden {
 /*** koniec navbara ***/
 /*** Kasia header***/
 
+.flex-carousel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 header h1 {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
     color: seashell;
+    text-shadow: 3px 3px #000;
     margin: 3% 0 3% 0;
     padding: 1% 0 1% 0;
     letter-spacing: 3pt;
