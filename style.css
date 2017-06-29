@@ -255,17 +255,27 @@ input[type=submit]:hover {
     border-radius: 50%;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    -webkit-transition: .2s ease-in-out;
-    transition: .2s ease-in-out;
     margin-top: 1em;
     height: 150px;
     width: 150px;
+    opacity: 0.0;
+    transition: transform 4000ms ease, opacity 4000ms ease;
+}
+.img-circle.left {
+    transform: scale(1) translate3d(-200%,0,0);
+}
+.img-circle.center {
+    transform: scale(1) translate3d(0,200%,0);
+}
+.img-circle.right {
+    transform: scale(1) translate3d(200%,0,0);
 }
 
-.img-circle:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
+.img-circle.active {
+    opacity: 1.0;
+    transform: scale(1.0) translate3d(0,0,0);
 }
+
 
 h5 {
     text-align: center;
