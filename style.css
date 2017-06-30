@@ -320,6 +320,17 @@ h5 {
 
 /*** Kasia koniec footra ***/
 
+/***  Magda arrow - scroll to top  ***/
+
+.arrowTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+/***  Kuba cookies  ***/
 .cookie {
     width: 100%;
     height: auto;
@@ -345,6 +356,7 @@ h5 {
     right: 50px;
     top: 5px;
     background-color: red;
+    cursor: pointer;
 }
 .rejectCookie {
     width: 20px;
@@ -353,5 +365,5 @@ h5 {
     right: 5px;
     top: 5px;
     background-color: grey;
-
+    cursor: pointer;
 }
