@@ -3,11 +3,13 @@ body {
     padding-top: 50px;
     font-family: 'Lato', sans-serif;
 }
+
 /*** Kasia navbar ***/
 nav .navbar-default {
     background-color: seashell;
     padding-top: 0;
 }
+
 nav .nav__link {
     text-transform: uppercase;
     font-weight: 600;
@@ -186,7 +188,6 @@ header h2 {
     background-color: #ffffff;
 }
 
-
 .newsletter label {
     line-height: 25px;
     color: white;
@@ -334,6 +335,7 @@ h5 {
     padding-right: 15%;
     padding-left: 10px;
 }
+
 .cookie.hidden {
     display: none;
 }
@@ -346,6 +348,7 @@ h5 {
     top: 5px;
     background-color: red;
 }
+
 .rejectCookie {
     width: 20px;
     height: 20px;

@@ -11,10 +11,11 @@
 
     <!-- ikonka strony = favicon wykonana na stronie faviconer.com -->
     <link href="MW_includes/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <script src="multilinguism.js"></script>
 </head>
 <body>
 
-<!--Poczatek Kasia - navbar-->
+<!--Poczatek Kasia - navbar-->`
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
     <div class="container-fluid">
 
@@ -26,18 +27,43 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+
+            <!------- links to multilinguism ------>
+
+            <a href="?lang=pl" title="polski">
+                <img alt="english" src="flags/flag-poland.png">
+            </a>
+            <a href="?lang=en" title="English">
+                <img alt="english" src="flags/flag-united-kingdom.png">
+            </a>
+            <a href="?lang=de" title="Deutsch">
+                <img alt="english" src="flags/flag-germany.png">
+            </a>
+            <a href="?lang=fi" title="suomalainen">
+                <img alt="english" src="flags/flag-finland.png">
+            </a>
+            <a href="?lang=fr" title="français">
+                <img alt="english" src="flags/flag-france.png">
+            </a>
+            <a href="?lang=es" title="español">
+                <img alt="english" src="flags/flag-spain.png">
+            </a>
+
+            <!------- links to multilinguism ------>
+
             <a class="navbar-brand" href="#">
                 <img class="img-responsive" src="MW_includes/145px_icon_yellow.png" alt="Logo Yellow"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav__link"><a href="#mainFunctions">Atrakcje<span class="sr-only">(current)</span></a></li>
-                <li class="nav__link"><a href="#mainFunctions">Wydarzenia<span class="sr-only">(current)</span></a></li>
-                <li class="nav__link"><a href="#mainFunctions">Kup bilet<span class="sr-only">(current)</span></a></li>
-                <li class="nav__link"><a href="#mainFunctions">Dodaj wydarzenie<span class="sr-only">(current)</span></a>
+                <li class="nav__link"><a href="#mainFunctions" id="monument">Atrakcje<span class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a href="#mainFunctions" id="event">Wydarzenia<span class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a href="#mainFunctions" id="buy">Kup bilet<span class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a href="#mainFunctions" id="add">Dodaj wydarzenie<span
+                        class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav__link"><a href="#contact">Kontakt<span class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a href="#contact" id="contactUs">Kontakt<span class="sr-only">(current)</span></a></li>
             </ul>
         </div>
     </div>
@@ -49,7 +75,7 @@
     <div class="container-fluid  backgroundImage">
         <div class="row">
             <div class="col-sm-12" id="h1">
-                <h1>GDAŃSK PEŁNY WRAŻEŃ</h1>
+                <h1 id="bigTitle">GDAŃSK PEŁNY WRAŻEŃ</h1>
             </div>
         </div>
         <div class="row">
@@ -62,7 +88,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12" id="h2">
-                <h2>Dla mieszkańców i turystów - dowiedz się, co najlepszego nasze miasto może ci zaoferować.
+                <h2 id="stimulus">Dla mieszkańców i turystów - dowiedz się, co najlepszego nasze miasto może ci zaoferować.
                     <br>Z nami nie ma czasu na nudę!</h2>
             </div>
         </div>
@@ -76,30 +102,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-3 funmain landmarks">
-                    <h3>Atrakcje turystyczne</h3>
+                    <h3 id="attractionsH3">Atrakcje turystyczne</h3>
                     <div class="mainFunctions__logo mainFunctions__logoLandmarks"></div>
-                    <h4>Zabytki, muzea, stałe ekspozycje</h4>
-                    <p>Dowiedz się, co warto zobaczyć i zwiedzić w Gdańsku, obejrzyj galerię najciekawszych miejsc i
+                    <h4 id="attractionsH4">Zabytki, muzea, stałe ekspozycje</h4>
+                    <p id="attractionsP">Dowiedz się, co warto zobaczyć i zwiedzić w Gdańsku, obejrzyj galerię najciekawszych miejsc i
                         zaplanuj swój pobyt.</p>
                 </div>
                 <div class="col-sm-6 col-md-3 funmain events">
-                    <h3>Wydarzenia</h3>
+                    <h3 id="eventsH3">Wydarzenia</h3>
                     <div class="mainFunctions__logo mainFunctions__logoEvents"></div>
-                    <h4>Kalendarz wydarzeń</h4>
-                    <p>Sprawdź, jakie imprezy planowane są w Gdańsku i zaplanuj przyjazd na wybrane wydarzenia.</p>
+                    <h4 id="eventsH4">Kalendarz wydarzeń</h4>
+                    <p id="eventsP">Sprawdź, jakie imprezy planowane są w Gdańsku i zaplanuj przyjazd na wybrane wydarzenia.</p>
                 </div>
                 <div class="col-sm-6 col-md-3 funmain tickets">
-                    <h3>Kup bilet</h3>
+                    <h3 id="buyTicketH3">Kup bilet</h3>
                     <div class="mainFunctions__logo mainFunctions__logoTickets"></div>
-                    <h4>Bilety na wydarzenia</h4>
-                    <p>Skorzystaj z rabatów przedsprzedaży lub last-minute - kup bilety i nie przegap atrakcyjnych
+                    <h4 id="buyTicketH4">Bilety na wydarzenia</h4>
+                    <p id="buyTicketP">Skorzystaj z rabatów przedsprzedaży lub last-minute - kup bilety i nie przegap atrakcyjnych
                         imprez.</p>
                 </div>
                 <div class="col-sm-6 col-md-3 funmain adds">
-                    <h3>Dodaj wydarzenie</h3>
+                    <h3 id="addEventH3">Dodaj wydarzenie</h3>
                     <div class="mainFunctions__logo mainFunctions__logoAdds"></div>
-                    <h4>Twoje wydarzenie w sieci</h4>
-                    <p>Jeśli organizujesz jakieś wydarzenie w Gdańsku, dodaj je do naszego kalendarza, a my je
+                    <h4 id="addEventH4">Twoje wydarzenie w sieci</h4>
+                    <p id="addEventP">Jeśli organizujesz jakieś wydarzenie w Gdańsku, dodaj je do naszego kalendarza, a my je
                         zaprezentujemy.</p>
                 </div>
             </div>
@@ -113,19 +139,19 @@
             <div class="row">
 
                 <div class="col-sm-12">
-                    <h3 class="text-bold">Zapisz się do nas!</h3>
-                    <p>Powiadomimy Cię, gdy nasza strona wystartuje - wystarczy, że podasz swoje imię i email :)</p>
+                    <h3 id="newsletterH3" class="text-bold">Zapisz się do nas!</h3>
+                    <p id="newsletterP">Powiadomimy Cię, gdy nasza strona wystartuje - wystarczy, że podasz swoje imię i email :)</p>
 
                     <form action="/submit_page.php">
 
                         <div class="form-group row">
 
-                            <label for="firstname" class="col-xs-2 col-sm-1 col-form-label">Imię:</label>
+                            <label for="firstname" class="col-xs-2 col-sm-1 col-form-label" id="newsletterName">Imię:</label>
                             <div class="col-xs-10 col-sm-5">
                                 <input type="text" class="form-control" id="firstname" placeholder="Imię" required>
                             </div>
 
-                            <label for="email" class="col-xs-2 col-sm-1 col-form-label">Email:</label>
+                            <label for="email" class="col-xs-2 col-sm-1 col-form-label" id="newsletterEmail">Email:</label>
                             <div class="col-xs-10 col-sm-5">
                                 <input type="email" class="form-control" id="email" placeholder="Email"
                                        name="usremail" required>
@@ -136,7 +162,7 @@
                                onclick="alert('Dziękujemy za zapisanie się! Jesteśmy w kontakcie!')">
                     </form>
 
-                    <p class="safety-info">Podane dane zostaną wykorzystane jedynie na potrzeby portalu wykonanego
+                    <p class="safety-info" id="newsletterInfo">Podane dane zostaną wykorzystane jedynie na potrzeby portalu wykonanego
                         przez Yellow Group.
                         Zostanie wysłany tylko jeden email informacyjny.</p>
                 </div>
@@ -152,58 +178,59 @@
 
             <div class="row">
                 <div class="col-sm-6 additionalFunctions">
-                    <h4>Atrakcje turystyczne</h4>
+                    <h4 id="attractionsH4add">Atrakcje turystyczne</h4>
                     <i class="fa fa-map-signs fa-3x"></i>
-                    <p>W tej sekcji będzie można zapoznać się z atrakcjami turystycznymi w Gdańsku, zarówno tymi
+                    <p id="attractionsP1">W tej sekcji będzie można zapoznać się z atrakcjami turystycznymi w Gdańsku, zarówno tymi
                         historycznymi, sportowymi, jak i tymi przeznaczonymi jedynie dla najmłodzszych odbiorców.</p>
                 </div>
 
-                <div class="col-sm-6 additionalFunctions"><h4>Wydarzenia</h4>
+                <div class="col-sm-6 additionalFunctions">
+                    <h4 id="eventsH4add">Wydarzenia</h4>
                     <i class="fa fa-calendar fa-3x"></i>
-                    <p>Nie samymi atrakcjami człowiek żyje. W kategorii wydarzenia pokażemy wszystkie eventy, na których
+                    <p id="eventsP1">Nie samymi atrakcjami człowiek żyje. W kategorii wydarzenia pokażemy wszystkie eventy, na których
                         warto być. Warto odwiedzać tę sekcję regularnie.</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-6 additionalFunctions">
-                    <h4>Kup bilet</h4>
+                    <h4 id="buyTicketH4add">Kup bilet</h4>
                     <i class="fa fa-ticket fa-3x"></i>
-                    <p>Nasz portal umożliwia zakup biletów na atrakcje i wydarzenia w Gdańsku.</p>
+                    <p id="buyTicketP1">Nasz portal umożliwia zakup biletów na atrakcje i wydarzenia w Gdańsku.</p>
                 </div>
 
                 <div class="col-sm-6 additionalFunctions">
-                    <h4>Dodaj wydarzenie</h4>
+                    <h4 id="addEventH4add">Dodaj wydarzenie</h4>
                     <i class="fa fa-plus fa-3x"></i>
-                    <p>Każdy z użytkowników będzie mógł zaproponować wydarzenie. Również Ty!</p>
+                    <p id="addEventsP1">Każdy z użytkowników będzie mógł zaproponować wydarzenie. Również Ty!</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-6 additionalFunctions">
-                    <h4>Pokaż na mapie</h4>
+                    <h4 id="showMapH4">Pokaż na mapie</h4>
                     <i class="fa fa-map-marker fa-3x"></i>
-                    <p>Aby pomóc naszym użytkownikom, każda atrakcja będzie zaznaczona na mapie.</p>
+                    <p id="showMapP1">Aby pomóc naszym użytkownikom, każda atrakcja będzie zaznaczona na mapie.</p>
                 </div>
 
                 <div class="col-sm-6 additionalFunctions">
-                    <h4>Podziel się ze znajomymi</h4>
+                    <h4 id="shareFriendsH4">Podziel się ze znajomymi</h4>
                     <i class="fa fa-share-alt-square fa-3x"></i>
-                    <p>Pod artykułami będzie możliwość łatwego dzielenia się nimi z przyjaciółmi za pomocą portali typu
+                    <p id="shareFriendsP1">Pod artykułami będzie możliwość łatwego dzielenia się nimi z przyjaciółmi za pomocą portali typu
                         social media.</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-6 additionalFunctions">
-                    <h4>Zaproponuj podobne</h4>
+                    <h4 id="suggestSimilarH4">Zaproponuj podobne</h4>
                     <i class="fa fa-info-circle fa-3x"></i>
-                    <p>Pod każdą atrakcją zaproponujemy użytkownikowi inne atrakcje o bardzo podobnej tematyce.</p>
+                    <p id="suggestSimilarP1">Pod każdą atrakcją zaproponujemy użytkownikowi inne atrakcje o bardzo podobnej tematyce.</p>
                 </div>
                 <div class="col-sm-6 additionalFunctions">
-                    <h4>Pokaż pogodę</h4>
+                    <h4 id="showWeatherH4">Pokaż pogodę</h4>
                     <i class="fa fa-sun-o fa-3x"></i>
-                    <p>Pogoda jest bardzo ważna podczas zwiedzania. Będziesz mógł na bieżąco sprawdzić, czy należy wziąć
+                    <p id="showWeatherP1">Pogoda jest bardzo ważna podczas zwiedzania. Będziesz mógł na bieżąco sprawdzić, czy należy wziąć
                         olejek do opalania czy niestety parasol.</p>
                 </div>
             </div>
@@ -229,9 +256,9 @@
                     </div>
                     <h5 class="text-bold">Magdalena Wojnicka</h5>
                     <ul>
-                        <li>Projektantka / kierownik projektów</li>
-                        <li>Kocham wszystko, co proste, piękne i funkcjonalne</li>
-                        <li>Uwielbiam się uczyć, rozwijać i dążyć do celu</li>
+                        <li id="mw1">Projektantka / kierownik projektów</li>
+                        <li id="mw2">Kocham wszystko, co proste, piękne i funkcjonalne</li>
+                        <li id="mw3">Uwielbiam się uczyć, rozwijać i dążyć do celu</li>
                     </ul>
                     <div class="icons">
                         <a href="mailto:michalak_jakub@yahoo.pl">
@@ -250,9 +277,9 @@
 
                     <h5 class="text-bold">Katarzyna Sitarz</h5>
                     <ul>
-                        <li>Filolożka klasyczna</li>
-                        <li>Nałogowa konsumentka estetyki</li>
-                        <li>Koneserka przyjemności, niezależnie od ich rozmiarów</li>
+                        <li id="ks1">Filolożka klasyczna</li>
+                        <li id="ks2">Nałogowa konsumentka estetyki</li>
+                        <li id="ks3">Koneserka przyjemności, niezależnie od ich rozmiarów</li>
                     </ul>
                     <div class="icons">
                         <a href="mailto:katarzyna.sitarz@gmail.com">
@@ -269,21 +296,21 @@
                         <img class="img-circle" src="img/jakubm.jpg" alt="Kuba">
                     </div>
 
-                        <h5 class="text-bold">Jakub Michalak</h5>
-                        <ul>
-                            <li>To mój pierwszy projekt www</li>
-                            <li>Z wykształcenia jestem mgr inż. budownictwa</li>
-                            <li>W wolnym czasie gram we frisbee, tenis, biegam, a także interesuję się lotnictwem
-                            </li>
-                        </ul>
-                        <div class="icons">
-                            <a href="mailto:michalak_jakub@yahoo.pl">
-                                <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
-                            <a href="https://pl.linkedin.com/in/michalakjakub">
-                                <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
-                            <i class="fa fa-instagram" style="font-size:2.25em"></i>
-                            <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
-                        </div>
+                    <h5 class="text-bold">Jakub Michalak</h5>
+                    <ul>
+                        <li id="jm1">To mój pierwszy projekt www</li>
+                        <li id="jm2">Z wykształcenia jestem mgr inż. budownictwa</li>
+                        <li id="jm3">W wolnym czasie gram we frisbee, tenis, biegam, a także interesuję się lotnictwem
+                        </li>
+                    </ul>
+                    <div class="icons">
+                        <a href="mailto:michalak_jakub@yahoo.pl">
+                            <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
+                        <a href="https://pl.linkedin.com/in/michalakjakub">
+                            <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
+                        <i class="fa fa-instagram" style="font-size:2.25em"></i>
+                        <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
+                    </div>
                 </div>
 
             </div>
@@ -313,5 +340,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="cookies.js"></script>
-</body >
-</html >
+<script src="multilinguism.js"></script>
+</body>
+</html>
