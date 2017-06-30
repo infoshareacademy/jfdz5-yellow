@@ -3,6 +3,8 @@
 $( '#about' ).mouseover(function() {
     $( '.img-circle' ).addClass('active');
 });
+
+ZEBY DZIALALO TRZEBA DODAC ID ABOUT TO DIV ABOUT
 */
 
 /* Y FIXED VERSION, not good for RWD
@@ -17,16 +19,18 @@ $(document).scroll(function() {
 */
 
 $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    if($(window).scrollTop() + $(window).height() === $(document).height()) {
         $('.img-circle').addClass('active');
     }
 });
 
-
-
-/* PONIZEJ KOD WERYFIKUJACY DO USUNIECA W FINALNEJ WERSJI PROJEKTU */
+/* KOD POMOCNICZY
 
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
-    console.log('pozycja scrolla' + scroll)
+    console.log('wielkosc dokumentu ' + $(document).height());
+    console.log('wielkosc okna ' + $(window).height());
+    console.log('pozycja scrolla ' + $(window).scrollTop());
 });
+
+ */
