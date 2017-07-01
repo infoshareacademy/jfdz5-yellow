@@ -24,11 +24,17 @@ nav .navbar-brand .img-responsive {
     max-height: 50px;
 }
 
-nav.hidden {
-    display: none;
+nav.hidden1 {
+    min-height: 20px;
+    max-height: 20px;
 }
 
-/*** koniec navbara ***/
+nav.hidden1 .navbar-brand .img-responsive {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+    /*** koniec navbara ***/
 /*** Kasia header***/
 .backgroundImage {
     height: 100%;
