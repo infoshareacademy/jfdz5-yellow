@@ -19,7 +19,10 @@ $(document).scroll(function() {
 */
 
 $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() === $(document).height()) {
+    var a = Math.round($(window).scrollTop() + $(window).height());
+    var b = Math.round($(document).height());
+    console.log(a, b)
+    if( a === b ) {
         $('.img-circle').addClass('active');
     }
 });
