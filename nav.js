@@ -1,7 +1,7 @@
 
 /**
- * Created by turbokitty on 18.06.17.
- */
+ * menu zwężające się  */
+
 $(document).ready(function() {
         var navbar = document.getElementById("navbar")
         document.addEventListener("wheel", function (event) {
@@ -13,12 +13,22 @@ $(document).ready(function() {
         console.log(event.wheelDelta)
     })
 
+/* płynnie przejeżdżająca strona*/
 
     $("#kontakt").click(function () {
         console.log($("#contact").offset());
         $("html,body").animate({
             scrollTop:$("#contact").offset().top
-        }, 5000)
+        }, 500)
     })
+
+
+
+/* podświetlenie sekcji w menu */
+
+
+
+
+
 
 })

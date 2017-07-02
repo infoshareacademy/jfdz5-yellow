@@ -4,35 +4,41 @@ body {
     font-family: 'Lato', sans-serif;
 }
 /*** Kasia navbar ***/
+
+
 nav .navbar-default {
     background-color: seashell;
     padding-top: 0;
-}
+  }
 
 nav .nav__link {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1pt;
-}
+         }
 
 nav .navbar-brand {
     padding-top: 0px;
-}
+   }
 
 nav .navbar-brand .img-responsive {
     max-width: 50px;
     max-height: 50px;
-}
+     }
 
 nav.hidden1 {
     min-height: 20px;
     max-height: 20px;
-}
+       }
+
+nav.hidden1 .nav>li>a {
+    display: inline;
+    }
 
 nav.hidden1 .navbar-brand .img-responsive {
     max-width: 20px;
     max-height: 20px;
-}
+    }
 
     /*** koniec navbara ***/
 /*** Kasia header***/
