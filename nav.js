@@ -6,28 +6,22 @@ $(document).ready(function() {
     var navbar = document.getElementById("navbar")
     document.addEventListener("wheel", function (event) {
         if (event.wheelDelta < 0) {
-            navbar.classList.add("hidden1")
+            navbar.classList.add("small")
         } else {
-            navbar.classList.remove("hidden1")
+            navbar.classList.remove("small")
         }
         console.log(event.wheelDelta)
     })
 
     /* płynnie przejeżdżająca strona*/
 
-    $("#kontakt").click(function () {
-        console.log($("#contact").offset());
+    $("nav a").click(function () {
+        //console.log($("#contact").offset());
+        var hash = $(this).attr('href');
         $("html,body").animate({
-            scrollTop: $("#contact").offset().top
+            scrollTop: $(hash).offset().top
         }, 500)
     })
-
-    // $("#funkcje").click(function () {
-    //     console.log($("#contact").offset());
-    //     $("html,body").animate({
-    //         scrollTop: $("#contact").offset().top
-    //     }, 500)
-    // })
 })
 
 
