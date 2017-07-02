@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!-- ikonka strony = favicon wykonana na stronie faviconer.com -->
     <link href="MW_includes/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     <script src="multilinguism.js"></script>
@@ -61,10 +62,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav navbar-right navi">
-                <li class="nav__link"><a data-scroll href="#landmarks" id="Funkcje">Atrakcje<span class="sr-only">(current)</span></a></li>
-                <li class="nav__link"><a data-scroll href="#events" id="Funkcje">Wydarzenia<span class="sr-only">(current)</span></a></li>
-                <li class="nav__link"><a data-scroll href="#tickets" id="Funkcje">Kup bilet<span class="sr-only">(current)</span></a></li>
-                <li class="nav__link"><a data-scroll href="#adds" id="Funkcje">Dodaj wydarzenie<span class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a data-scroll href="#landmarks" id="land">Atrakcje<span class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a data-scroll href="#events" id="eve">Wydarzenia<span class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a data-scroll href="#tickets" id="tick">Kup bilet<span class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a data-scroll href="#adds" id="add">Dodaj wydarzenie<span class="sr-only">(current)</span></a></li>
                 <li class="nav__link"><a data-scroll href="#contact" id="kontakt">Kontakt<span class="sr-only">(current)</span></a></li>
             </ul>
         </div>
@@ -135,7 +136,7 @@
 <main>
     <!-- Magda - Spis planowanych funkcji produktu = sekcja mainFunctions -->
 
-    <section class="mainFunctions">
+        <section class="mainFunctions">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-3 funmain landmarks target" id="landmarks">
@@ -146,14 +147,14 @@
                         najciekawszych miejsc i
                         zaplanuj swój pobyt.</p>
                 </div>
-                <div class="col-sm-6 col-md-3 funmain events target" id="events"">
+                <div class="col-sm-6 col-md-3 funmain events target" id="events">
                     <h3 id="eventsH3">Wydarzenia</h3>
                     <div class="mainFunctions__logo mainFunctions__logoEvents"></div>
                     <h4 id="eventsH4">Kalendarz wydarzeń</h4>
                     <p id="eventsP">Sprawdź, jakie imprezy planowane są w Gdańsku i zaplanuj przyjazd na wybrane
                         wydarzenia.</p>
                 </div>
-            <div class="col-sm-6 col-md-3 funmain tickets target" id="tickets"">
+            <div class="col-sm-6 col-md-3 funmain tickets target" id="tickets">
                 <h3 id="buyTicketH3">Kup bilet</h3>
                 <div class="mainFunctions__logo mainFunctions__logoTickets"></div>
                 <h4 id="buyTicketH4">Bilety na wydarzenia</h4>
@@ -161,16 +162,15 @@
                     atrakcyjnych
                     imprez.</p>
             </div>
-        <div class="col-sm-6 col-md-3 funmain adds target" id="adds">
+             <div class="col-sm-6 col-md-3 funmain adds target" id="adds">
             <h3 id="addEventH3">Dodaj wydarzenie</h3>
             <div class="mainFunctions__logo mainFunctions__logoAdds"></div>
             <h4 id="addEventH4">Twoje wydarzenie w sieci</h4>
             <p id="addEventP">Jeśli organizujesz jakieś wydarzenie w Gdańsku, dodaj je do naszego kalendarza, a
-                my je
-                zaprezentujemy.</p>
-        </div>
-
-    </section>
+                my je zaprezentujemy.</p>
+            </div>
+         </div>
+        </div></section>
     <!-- Magda - koniec sekcji mainFunctions -->
 
     <!-- Kuba - początek Newsletter -->
@@ -297,7 +297,7 @@
                     <h3 class="text-about">Yellow team</h3>
                 </div>
             </div>
-            <div class="row" id="contact">
+            <div class="row">
 
 
                 <div class="row target" id="contact">
@@ -365,7 +365,7 @@
                 </div>
 
             </div>
-        </section>
+            </div></section>
     </div>
     <!--KONIEC CZESCI KUBA - kontakt-->
 </main>
