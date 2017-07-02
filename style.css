@@ -6,30 +6,58 @@ body {
 }
 
 /*** Kasia navbar ***/
+
 nav .navbar-default {
     background-color: seashell;
     padding-top: 0;
-}
+    color: #777;
+    transition: 200ms all linear;
+  }
 
 nav .nav__link {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1pt;
 }
+    overflow: hidden;
+    transition: 200ms all linear;
+         }
+
+nav .nav__link__active {
+    background: hsla(220, 79%, 54%, 0.61);
+    transition: 200ms all linear;
+        }
+
 nav .navbar-brand {
     padding-top: 0px;
-}
+    transition: 200ms all linear;
+   }
 
 nav .navbar-brand .img-responsive {
     max-width: 50px;
     max-height: 50px;
+    transition: 200ms all linear;
+     }
+
+nav.small {
+    min-height: 20px;
+    max-height: 20px;
 }
 
-nav.hidden {
-    display: none;
+nav.small .nav>li>a {
+    display: inline;
 }
 
-/*** koniec navbara ***/
+nav.small .navbar-brand .img-responsive {
+    max-width: 20px;
+    max-height: 20px;
+    transition: 200ms all linear;
+}
+
+
+
+    /*** koniec navbara ***/
+
 /*** Kasia header***/
 
 .flex-carousel {
