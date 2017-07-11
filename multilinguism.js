@@ -245,7 +245,7 @@ myDictionary["fr"] = {
     "event":"événements",
     "buy":"Acheter un billet",
     "add":"Ajouter un événement",
-    "contactUs":"Kontakt",
+    "contactUs":"Contact",
     "attractionsH3":"Attractions touristiques",
     "attractionsH4":"Les monuments, les musées, les expositions permanentes",
     "attractionsH4add":"Attractions touristiques",
@@ -298,7 +298,7 @@ myDictionary["es"] = {
     "event":"Eventos",
     "buy":"Comprar un billete",
     "add":"Añadir evento",
-    "contactUs":"Kontakt",
+    "contactUs":"Contacto",
     "attractionsH3":"Atracciones turísticas",
     "attractionsH4":"Monumentos, museos, exposiciones permanentes",
     "attractionsH4add":"Atracciones turísticas",
@@ -352,6 +352,7 @@ var global_lang = QueryString['lang'];
 if (global_lang !== null) {
     // pętlą for przechodzimy po wszystkich kluczach z danego słownika
     for (key in myDictionary[global_lang]) {
+        console.log(key);
         // podmieniamy HTML dla nadych kluczy i zastępujemy oryginał tłumaczeniem
         document.getElementById(key).innerHTML = myDictionary[global_lang][key];
     }
