@@ -27,6 +27,12 @@
  }
  */
 
+var shuffle = function(arr) {
+    for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
+    return arr;
+}
+
+
 // "łapiemy" znaczniki HTML i zapisujemy odniesienia do tych elementów w zmiennych
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
@@ -40,13 +46,14 @@ var submitButton = document.getElementById('submit');
  */
 var questions = [
     {
-        question: "Z jakiej rzeźby-pomnika słynie Gdańsk?",
+        question: "Z jakiej fontanny słynie Gdańsk?",
         answers: {
-            a: "Syrenka",
-            b: "1970",
-            c: "Adam Mickiewicz",
+            a: "Wolności",
+            b: "Potop",
+            c: "Kryształ",
             d: "Neptun"
         },
+        picture:"quiz_img/fontannaNeptun.jpg",
         correctAnswer: "d"
     },
     {
@@ -57,6 +64,7 @@ var questions = [
             c: "Motławą",
             d: "Martwą Wisłą"
         },
+        picture:"quiz_img/MotlawaZGory.jpg",
         correctAnswer: "c"
     },
     {
@@ -67,9 +75,13 @@ var questions = [
             c: "Boyen",
             d: "Biskupia Górka"
         },
+        picture:"quiz_img/twierdzaWisloujscie.jpg",
         correctAnswer: "b"
     }
 ];
+
+shuffle(questions);
+
 
 // rozpoczynamy budowę naszj funkcji generującej quiz
 
@@ -85,15 +97,20 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         // dla każdego pytania...
         for (var i = 0; i < questions.length; i++) {
             // będziemy chcieli zapisać listę opcji wyboru odpowiedzi
+            console.log(questions[i].answers);
             answers = [];
             // i dla każdej dostępnej odpowiedzi ...
-            for (letter in questions[i].answers) {
+
+            var keys = Object.keys(questions[i].answers);
+            shuffle(keys);
+            for(var j=0; j<keys.length;j++){
+                var letter = keys[j];
                 // ... dodamy radio-button HTML
                 answers.push(
                     '<label>'
                     + '<input type="radio" name="question' + i + '" value="' + letter + '">'
                     + ' '
-                    + questions[i].answers[letter]
+                    + questions[i].answers[keys[j]]
                     + '</label>'
                 );
             }
@@ -101,6 +118,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             // teraz dodamy konkretne pytanie i jego odpowiedzi do HTML DOM
             output.push(
                 '<div class="question">'
+                + '<img src="'+questions[i].picture+'"></br>'
                 + questions[i].question
                 + '</div>'
                 + '<div class="answers">'
