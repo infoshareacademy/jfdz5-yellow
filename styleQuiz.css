@@ -7,16 +7,30 @@ body{
 .question{
     font-weight: 300;
     color: white;
+    margin: 20px;
+    text-align: center;
+}
+
+.picture{
+    text-align: center;
+}
+
+.picture img{
+    width: 500px;
+    text-align: center;
 }
 
 .answers{
     margin-bottom: 20px;
+    margin-top: 20px;
     color: #279;
+    text-align: center;
 }
 
 .answers label{
     display: block;
 }
+
 
 #submit{
     background-color: #279;
@@ -26,8 +40,11 @@ body{
     border-radius: 3px;
     padding: 20px;
     cursor: pointer;
-    margin-bottom: 20px;
+    display: block;
+    margin: auto;
 }
+
+
 #submit:hover{
     background-color: #38a;
 }

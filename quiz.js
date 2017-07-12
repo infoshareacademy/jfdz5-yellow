@@ -4,8 +4,8 @@
 
 /*
  Pierwszy krok: Budujemy strukturę gry
-  1) w pliku indexQuiz.html - HTML
-  2) w pliku quiz.js - JavaSript:
+ 1) w pliku indexQuiz.html - HTML
+ 2) w pliku quiz.js - JavaSript:
 
  function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
@@ -27,8 +27,8 @@
  }
  */
 
-var shuffle = function(arr) {
-    for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
+var shuffle = function (arr) {
+    for (var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
     return arr;
 }
 
@@ -53,7 +53,7 @@ var questions = [
             c: "Kryształ",
             d: "Neptun"
         },
-        picture:"quiz_img/fontannaNeptun.jpg",
+        picture: "quiz_img/fontannaNeptun.jpg",
         correctAnswer: "d"
     },
     {
@@ -64,7 +64,7 @@ var questions = [
             c: "Motławą",
             d: "Martwą Wisłą"
         },
-        picture:"quiz_img/MotlawaZGory.jpg",
+        picture: "quiz_img/MotlawaZGory.jpg",
         correctAnswer: "c"
     },
     {
@@ -75,7 +75,7 @@ var questions = [
             c: "Boyen",
             d: "Biskupia Górka"
         },
-        picture:"quiz_img/twierdzaWisloujscie.jpg",
+        picture: "quiz_img/twierdzaWisloujscie.jpg",
         correctAnswer: "b"
     }
 ];
@@ -97,13 +97,12 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         // dla każdego pytania...
         for (var i = 0; i < questions.length; i++) {
             // będziemy chcieli zapisać listę opcji wyboru odpowiedzi
-            console.log(questions[i].answers);
             answers = [];
-            // i dla każdej dostępnej odpowiedzi ...
 
+            // i dla każdej dostępnej odpowiedzi, których kolejność będzie losowana
             var keys = Object.keys(questions[i].answers);
             shuffle(keys);
-            for(var j=0; j<keys.length;j++){
+            for (var j = 0; j < keys.length; j++) {
                 var letter = keys[j];
                 // ... dodamy radio-button HTML
                 answers.push(
@@ -118,8 +117,10 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             // teraz dodamy konkretne pytanie i jego odpowiedzi do HTML DOM
             output.push(
                 '<div class="question">'
-                + '<img src="'+questions[i].picture+'"></br>'
                 + questions[i].question
+                + '</div>'
+                + '<div class="picture">'
+                + '<img src="' + questions[i].picture + '">'
                 + '</div>'
                 + '<div class="answers">'
                 + answers.join('')
@@ -132,7 +133,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
     }
 
-// teraz możemy uruchomić funkcję w następujący sposób
+// teraz możemy uruchomić funkcję
     showQuestions(questions, quizContainer);
 
 // Trzeci krok: Po naciśnnięciu przycisku submit - pokaż wyniki quizu
@@ -159,9 +160,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 answerContainers[i].style.color = 'lightgreen';
             }
             // jeśli odpowiedź jest nieprawidłowa
-            else{
-            // zakoloruj tę odpowiedź na czerwono
-            answerContainers[i].style.color = 'red';
+            else {
+                // zakoloruj tę odpowiedź na czerwono
+                answerContainers[i].style.color = 'red';
             }
         }
 // pokazujemy ilość poprawnych odpowiedzi w stosunku do wszystkich
