@@ -30,7 +30,7 @@
 var shuffle = function (arr) {
     for (var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
     return arr;
-}
+};
 
 
 // "łapiemy" znaczniki HTML i zapisujemy odniesienia do tych elementów w zmiennych
@@ -114,9 +114,11 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 );
             }
 
-            // teraz dodamy konkretne pytanie i jego odpowiedzi do HTML DOM
+            // teraz dodamy konkretne pytanie i ich odpowiedzi do HTML DOM
             output.push(
-                '<div class="question">'
+                '<ul id="slides">'
+                +'<li class = "slide">'
+                +'<div class="question">'
                 + questions[i].question
                 + '</div>'
                 + '<div class="picture">'
@@ -125,11 +127,44 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 + '<div class="answers">'
                 + answers.join('')
                 + '</div>'
+                + '</li>'
+                + '</ul>'
             );
         }
 
 // ostatecznie połączymy naszą listę danych HTML w jeden ciąg HTML i umieścimy go na stronie
         quizContainer.innerHTML = output.join('');
+
+        // pojawiają się pojedyncze slajdy
+        var slides = document.querySelectorAll('#slides .slide');
+        var currentSlide = 0;
+
+        function nextSlide() {
+            goToSlide(currentSlide+1);
+        }
+
+        function previousSlide() {
+            goToSlide(currentSlide-1);
+        }
+
+        function goToSlide(n) {
+            slides[currentSlide].className = 'slide';
+            currentSlide = (n+slides.length)%slides.length;
+            slides[currentSlide].className = 'slide showing';
+        }
+
+        // zmieniamy slajdy przez kliknięcie w strzałkę
+        var next = document.getElementById('next');
+        var previous = document.getElementById('previous');
+
+        next.onclick = function() {
+          //  pauseSlideshow();
+            nextSlide();
+        };
+        previous.onclick = function() {
+         //   pauseSlideshow();
+            previousSlide();
+        };
 
     }
 
