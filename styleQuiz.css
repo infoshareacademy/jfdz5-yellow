@@ -11,12 +11,13 @@ body{
 .question{
     font-weight: 300;
     color: white;
-    margin-top: 100px;
+    margin-top: 120px;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .picture{
+    max-width: 100%;
     text-align: center;
 }
 
@@ -64,8 +65,8 @@ body{
     padding: 20px 0px;
     font-size: 20px;
     cursor: pointer;
+    margin: 10px 0 0 10px;
     border: 2px solid #fff;
-    margin: 10px 0px 0px 10px;
     width: 70px;
 }
 
@@ -101,7 +102,9 @@ body{
 }
 
 #results{
-    color: white;
+    color: #38a;
     text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
