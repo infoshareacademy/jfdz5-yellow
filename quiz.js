@@ -77,7 +77,140 @@ var questions = [
         },
         picture: "quiz_img/twierdzaWisloujscie.jpg",
         correctAnswer: "b"
-    }
+    },
+    {
+        question: "Najważniejsze cykliczne wydarzenie w Gdańsku to:",
+        answers: {
+            a: "Jarmark Dominikański",
+            b: "Festiwal Tańca",
+            c: "Projekt Heweliusz",
+            d: "Festiwal Goldbergowski"
+        },
+        picture: "quiz_img/JarmarkDominikanski.jpg",
+        correctAnswer: "a"
+    },
+    {
+        question: "W dniach 1-7 września 1939 roku dostępu do Gdańska broniono pod:",
+        answers: {
+            a: "Oliwą",
+            b: "Kępą Oksywską",
+            c: "Westerplatte",
+            d: "Ossą"
+        },
+        picture: "quiz_img/Westerplatte.jpg",
+        correctAnswer: "c"
+    },
+    {
+        question: "Średniowieczny dźwig portowy z bramą wodną Gdańska zlokalizowany nad Motławą to:",
+        answers: {
+            a: "Czapla",
+            b: "Żuraw",
+            c: "Bocian",
+            d: "Katownia"
+        },
+        picture: "quiz_img/ZurawNadMotlawa.jpg",
+        correctAnswer: "b"
+    },
+    {
+        question: "Park gdański słynący między innymi z bogatych iluminacji bożonarodzeniowych to:",
+        answers: {
+            a: "Park Akademicki",
+            b: "Park Kuźniczki",
+            c: "Park Uphagena",
+            d: "Park Oliwski"
+        },
+        picture: "quiz_img/IluminacjeSwiateczneParkOliwski.jpg",
+        correctAnswer: "d"
+    },
+    {
+        question: "Gdańskie osiedle o planie urbanistycznym na kształt plastrów miodu to:",
+        answers: {
+            a: "Zaspa",
+            b: "Przymorze",
+            c: "Suchanino",
+            d: "Wrzeszcz"
+        },
+        picture: "quiz_img/ZaspaPlastryMiodu.jpg",
+        correctAnswer: "a"
+    },
+    {
+        question: "Jaką nazwą określane są najdłuższe budynki mieszkalne w Polsce i w Gdańsku?",
+        answers: {
+            a: "łamańce",
+            b: "liniowce",
+            c: "falowce",
+            d: "wężownice"
+        },
+        picture: "quiz_img/FalowiecObroncowWybrzeza.jpg",
+        correctAnswer: "c"
+    },
+    {
+        question: "Stadion Energa Gdańsk to stadion klubowy ...?:",
+        answers: {
+            a: "Lechii",
+            b: "Arki",
+            c: "Trefla",
+            d: "Bałtyku"
+        },
+        picture: "quiz_img/GdanskArena.jpg",
+        correctAnswer: "a"
+    },
+    {
+        question: "Jaki pomnik stoi na Placu Solidarności nieopodal Bramy nr2 Stoczni Gdańskiej?:",
+        answers: {
+            a: "Pomnik Tym, którzy nie wrócili z morza",
+            b: "Pomnik Polskiego Państwa Podziemnego",
+            c: "Pomnik Poległych Stoczniowców 1970",
+            d: "Pomnik Obrońców Poczty Polskiej"
+        },
+        picture: "quiz_img/PomnikStoczniowcow.jpg",
+        correctAnswer: "c"
+    },
+    {
+        question: "Gdański teatr z otwieranym dachem, warty odwiedzenia ze względu na spektakle i architekturę to:",
+        answers: {
+            a: "Teatr Muzyczny",
+            b: "Teatr Wybrzeże",
+            c: "Teatr Miniatura",
+            d: "Teatr Szekspirowski"
+        },
+        picture: "quiz_img/TeatrSzekspirowski.jpg",
+        correctAnswer: "d"
+    },
+    {
+        question: "Nowoczesny budynek muzealny, przy ul. Wałowej, na terenie historycznej Wiadrowni jest siedzibą:",
+        answers: {
+            a: "Muzeum Narodowego",
+            b: "Muzeum II Wojny Światowej",
+            c: "Muzeum Bursztynu",
+            d: "Muzeum Poczty Polskiej"
+        },
+        picture: "quiz_img/MuzeumIIWojnySwiatowej.jpg",
+        correctAnswer: "b"
+    },
+    {
+        question: "Centrum prowadzące działalność edukacyjną, naukową, wydawniczą oraz wystawienniczą na terenie Młodego Miasta Gdańska to:",
+        answers: {
+            a: "Europejskie Centrum Solidarności",
+            b: "Olivia Business Centre",
+            c: "Centrum Sztuki Współczesnej Łaźnia",
+            d: "Nadbałtyckie Centrum Kultury"
+        },
+        picture: "quiz_img/EuropejskieCentrumSolidarnosci.jpg",
+        correctAnswer: "a"
+    },
+    {
+        question: "Jak nazywa się główny rynek Gdańska?",
+        answers: {
+            a: "Pchli Targ",
+            b: "Zielony Rynek",
+            c: "Renk",
+            d: "Długi Targ"
+        },
+        picture: "quiz_img/DlugiTarg.jpg",
+        correctAnswer: "d"
+    },
+
 ];
 
 shuffle(questions);
