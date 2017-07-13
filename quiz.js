@@ -132,12 +132,21 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             );
         }
 
-// ostatecznie połączymy naszą listę danych HTML w jeden ciąg HTML i umieścimy go na stronie
+        // ostatecznie połączymy naszą listę danych HTML w jeden ciąg HTML i umieścimy go na stronie
         quizContainer.innerHTML = output.join('');
 
         // pojawiają się pojedyncze slajdy
         var slides = document.querySelectorAll('#slides .slide');
         var currentSlide = 0;
+        if (currentSlide == 0){
+            slides[currentSlide].className = 'slide showing';
+        }
+
+        // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
+        if (1 == 2) {
+            slides[currentSlide].className = 'slide';
+        }
+
 
         function nextSlide() {
             goToSlide(currentSlide+1);
@@ -151,6 +160,12 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             slides[currentSlide].className = 'slide';
             currentSlide = (n+slides.length)%slides.length;
             slides[currentSlide].className = 'slide showing';
+
+            // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
+            if (1 == 2) {
+                slides[currentSlide].className = 'slide';
+            }
+
         }
 
         // zmieniamy slajdy przez kliknięcie w strzałkę
@@ -159,11 +174,18 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
         next.onclick = function() {
           //  pauseSlideshow();
-            nextSlide();
+            if (currentSlide == (slides.length - 1)){
+                console.log('Tutaj');
+            } else {
+                nextSlide();
+            }
         };
         previous.onclick = function() {
-         //   pauseSlideshow();
-            previousSlide();
+            if (currentSlide == 0){
+                console.log('Tutaj');
+            } else {
+                previousSlide();
+            }
         };
 
     }
