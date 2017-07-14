@@ -301,6 +301,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
         }
 
+
         // zmieniamy slajdy przez kliknięcie w strzałkę
         var next = document.getElementById('next');
         var previous = document.getElementById('previous');
