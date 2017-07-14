@@ -32,7 +32,6 @@ var shuffle = function (arr) {
     return arr;
 };
 
-
 // "łapiemy" znaczniki HTML i zapisujemy odniesienia do tych elementów w zmiennych
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
@@ -215,6 +214,34 @@ var questions = [
 
 shuffle(questions);
 
+// tutaj wstawiam moj timer ktory dziala tylko 1 raz
+
+var clock = function () {
+
+    var countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
+    var timer = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownStartDate - now;
+        var seconds = Math.floor(distance / 1000);
+        if (distance >= 5 * 1000) {
+            $('#timer').text(seconds);
+            $('#notice').text('waiting for info');
+        }
+        else if (distance < 0) {
+            clearInterval(timer);
+            $('#timer').text('EXPIRED !!!');
+            $('#notice').text('EXPIRED !!!');
+            $('#trigger').text('TRIGGER SENT TO CHANGE QUESTION !!!');
+        }
+        else {
+            $('#timer').text(seconds).addClass('red');
+            $('#notice').text('HURRY UP !!!').addClass('red');
+        }
+      //  console.log(distance);
+    }, 100);
+
+};
+
 
 // rozpoczynamy budowę naszj funkcji generującej quiz
 
@@ -231,10 +258,10 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         for (var i = 0; i < questions.length; i++) {
             // będziemy chcieli zapisać listę opcji wyboru odpowiedzi
             answers = [];
-
             // i dla każdej dostępnej odpowiedzi, których kolejność będzie losowana
             var keys = Object.keys(questions[i].answers);
             shuffle(keys);
+            clock();
             for (var j = 0; j < keys.length; j++) {
                 var letter = keys[j];
                 // ... dodamy radio-button HTML
@@ -246,7 +273,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                     + '</label>'
                 );
             }
-
             // teraz dodamy konkretne pytanie i ich odpowiedzi do HTML DOM
             output.push(
                 '<ul id="slides">'
@@ -288,6 +314,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
         function nextSlide() {
             goToSlide(currentSlide+1);
+
         }
 
         function previousSlide() {
@@ -298,7 +325,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             slides[currentSlide].className = 'slide';
             currentSlide = (n+slides.length)%slides.length;
             slides[currentSlide].className = 'slide showing';
-
             // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
             if (1 == 2) {
                 slides[currentSlide].className = 'slide';

@@ -20,31 +20,6 @@
 <div id="results"></div>
 <script src="quiz.js"></script>
 
-<script>
-    $(document).ready(function() {
-        var countDownDate = ( new Date().getTime() ) + 8*1000;
-        var counter = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-            var seconds = Math.floor(distance/1000);
-            if ( distance >= 5*1000 ) {
-                $('#timer').text(seconds);
-                $('#notice').text('waiting for info');
-            }
-            else if ( distance < 0 ){
-                clearInterval(counter);
-                $('#timer').text('EXPIRED !!!');
-                $('#notice').text('EXPIRED !!!');
-                $('#trigger').text('TRIGGER SENT TO CHANGE QUESTION !!!');
-            }
-            else {
-                $('#timer').text(seconds).addClass('red');
-                $('#notice').text('HURRY UP !!!').addClass('red');
-            }
-            console.log(distance);
-        }, 100);
-    })
-</script>
 
 </body>
 </html>
