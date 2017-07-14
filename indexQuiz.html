@@ -5,9 +5,12 @@
     <title>Quiz</title>
     <link href="styleQuiz.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
 <div id="quiz"></div>
+
+
     <div class="buttons">
         <button class="controls" id="previous">&lt;</button>
         <button class="controls" id="next">&gt;</button>
@@ -15,6 +18,39 @@
 
 <button id="submit">Podsumuj Quiz</button>
 <div id="results"></div>
+
+
+<h1 id="timer">TIMER</h1>
+<h2 id="notice">INFORMATION #1</h2>
+<h2 id="trigger">INFORMATION #2</h2>
+
 <script src="quiz.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var countDownDate = ( new Date().getTime() ) + 8*1000;
+        var counter = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var seconds = Math.floor(distance/1000);
+            if ( distance >= 5*1000 ) {
+                $('#timer').text(seconds);
+                $('#notice').text('waiting for info');
+            }
+            else if ( distance < 0 ){
+                clearInterval(counter);
+                $('#timer').text('EXPIRED !!!');
+                $('#notice').text('EXPIRED !!!');
+                $('#trigger').text('TRIGGER SENT TO CHANGE QUESTION !!!');
+            }
+            else {
+                $('#timer').text(seconds).addClass('red');
+                $('#notice').text('HURRY UP !!!');
+            }
+            console.log(distance);
+        }, 100);
+    })
+</script>
+
 </body>
 </html>
