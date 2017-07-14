@@ -1,7 +1,7 @@
 body{
     font-size: 20px;
     font-family:  'Lato', sans-serif;
-    background-color: yellow;
+    background-color: black;
 }
 
 .quiz{
@@ -116,7 +116,13 @@ STYLE KUBY TIMER START
 .red {
     color: red;
 }
-
+.timer{
+    font-weight: 300;
+    color: white;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 /*
 STYLE KUBY TIMER END
 */

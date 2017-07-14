@@ -18,12 +18,6 @@
 
 <button id="submit">Podsumuj Quiz</button>
 <div id="results"></div>
-
-
-<h1 id="timer">TIMER</h1>
-<h2 id="notice">INFORMATION #1</h2>
-<h2 id="trigger">INFORMATION #2</h2>
-
 <script src="quiz.js"></script>
 
 <script>
@@ -45,7 +39,7 @@
             }
             else {
                 $('#timer').text(seconds).addClass('red');
-                $('#notice').text('HURRY UP !!!');
+                $('#notice').text('HURRY UP !!!').addClass('red');
             }
             console.log(distance);
         }, 100);

@@ -251,6 +251,11 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             output.push(
                 '<ul id="slides">'
                 +'<li class = "slide">'
+                +'<div class="timer">'
+                + '<h1 id="timer">TIMER</h1>'
+                + '<h2 id="notice">INFORMATION #1</h2>'
+                + '<h2 id="trigger">INFORMATION #2</h2>'
+                + '</div>'
                 +'<div class="question">'
                 + questions[i].question
                 + '</div>'
