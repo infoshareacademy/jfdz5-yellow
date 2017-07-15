@@ -214,36 +214,6 @@ var questions = [
 
 shuffle(questions);
 
-// tutaj wstawiam moj timer ktory dziala tylko 1 raz
-
-function clock () {
-
-    var countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
-    var timer = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countDownStartDate - now;
-        var seconds = Math.floor(distance / 1000);
-        if (distance >= 5 * 1000) {
-            $('#timer').text(seconds);
-            $('#notice').text('waiting for info');
-        }
-        else if (distance < 0) {
-            clearInterval(timer);
-            $('#timer').text('EXPIRED !!!');
-            $('#notice').text('EXPIRED !!!');
-            $('#trigger').text('TRIGGER SENT TO CHANGE QUESTION !!!');
-        }
-        else {
-            $('#timer').text(seconds).addClass('red');
-            $('#notice').text('HURRY UP !!!').addClass('red');
-        }
-      //  console.log(distance);
-    }, 100);
-
-};
-
-
-
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
 
     function showQuestions(questions, quizContainer) {
@@ -270,11 +240,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             output.push(
                 '<ul id="slides">'
                 +'<li class = "slide">'
-                +'<div class="timer">'
-                + '<h1 id="timer">TIMER</h1>'
-                + '<h2 id="notice">INFORMATION #1</h2>'
-                + '<h2 id="trigger">INFORMATION #2</h2>'
-                + '</div>'
                 +'<div class="question">'
                 + questions[i].question
                 + '</div>'
@@ -314,6 +279,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             slides[currentSlide].className = 'slide';
             currentSlide = (n+slides.length)%slides.length;
             slides[currentSlide].className = 'slide showing';
+            clearInterval(timer);
+            clock();
 
             // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
             // ?? do usuniecia ???
@@ -323,10 +290,38 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             }
         }
 
+        function clock () {
+
+            var countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
+            var timer = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownStartDate - now;
+                var seconds = Math.floor(distance / 1000);
+                if (distance >= 5 * 1000) {
+                    $('#timer').text(seconds);
+                    $('#notice').text('waiting for info');
+                }
+                else if (distance < 0) {
+                    clearInterval(timer);
+                    $('#timer').text('EXPIRED !!!');
+                    $('#notice').text('EXPIRED !!!');
+                    $('#trigger').text('TRIGGER SENT TO CHANGE QUESTION !!!');
+                    nextSlide();
+                }
+                else {
+                    $('#timer').text(seconds).addClass('red');
+                    $('#notice').text('HURRY UP !!!').addClass('red');
+                }
+                console.log("zegart tyka" + distance);
+            }, 100);
+
+        };
+
         var slides = document.querySelectorAll('#slides .slide');
 
         if (currentSlide == 0){
             slides[currentSlide].className = 'slide showing';
+            clock();
 
         }
 
