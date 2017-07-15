@@ -1,26 +1,47 @@
 /*** Kasia ***/
 body {
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
 }
 
 /*** Kasia navbar ***/
 
-nav .navbar-default {
+nav .navbarnew {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    margin-bottom: 0;
     background-color: seashell;
     padding-top: 0;
-    color: #777;
     transition: 200ms all linear;
+    padding-right: -15px;
+    padding-left: 15px;
   }
 
+nav .menu {
+    text-align: right;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: 200ms all linear;
+}
+
 nav .nav__link {
+    display: inline;
+    color: #777;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1pt;
+    margin: 0px 20px 0px 20px;
     overflow: hidden;
     transition: 200ms all linear;
          }
+
+nav nav__link:hover {
+    text-decoration: none;
+    background-color: hsla(220, 79%, 54%, 0.61);
+    ;
+}
 
 nav .nav__link__active {
     background: hsla(220, 79%, 54%, 0.61);
@@ -29,6 +50,7 @@ nav .nav__link__active {
 
 nav .navbar-brand {
     padding-top: 0px;
+    padding-left: 0px;
     transition: 200ms all linear;
    }
 

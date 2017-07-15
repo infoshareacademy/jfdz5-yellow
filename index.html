@@ -14,25 +14,19 @@
 </head>
 <body>
 
-<!--Poczatek Kasia - navbar-->`
+<!--Poczatek Kasia - navbar-->
 <!-- Magda - start div to scroll to top by arrow onclick -->
 <div class="start"></div>
 
 <!--Poczatek Kasia - navbar-->
-<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+<nav  class="navbarnew" id="navbar">
     <div class="container-fluid">
+        <div class="row">
 
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <!------- links to multilinguism ------>
-
+                   <!------- links to multilinguism ------>
+            <div class="col-md-4">
+            <a class="navbar-brand" href="#">
+                <img class="img-responsive" src="MW_includes/145px_icon_yellow.png" alt="Logo Yellow"></a>
             <a href="?lang=pl" title="polski">
                 <img alt="english" src="flags/flag-poland.png">
             </a>
@@ -51,24 +45,22 @@
             <a href="?lang=es" title="español">
                 <img alt="english" src="flags/flag-spain.png">
             </a>
-
+            </div>
             <!------- links to multilinguism ------>
 
-            <a class="navbar-brand" href="#">
-                <img class="img-responsive" src="MW_includes/145px_icon_yellow.png" alt="Logo Yellow"></a>
-        </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-            <ul class="nav navbar-nav navbar-right navi">
+            <div class="col-md-8 menu">
                 <li class="nav__link"><a data-scroll href="#landmarks" id="monument">Atrakcje<span class="sr-only">(current)</span></a></li>
                 <li class="nav__link"><a data-scroll href="#events" id="event">Wydarzenia<span class="sr-only">(current)</span></a></li>
                 <li class="nav__link"><a data-scroll href="#tickets" id="buy">Kup bilet<span class="sr-only">(current)</span></a></li>
                 <li class="nav__link"><a data-scroll href="#adds" id="add">Dodaj wydarzenie<span class="sr-only">(current)</span></a></li>
                 <li class="nav__link"><a data-scroll href="#contact" id="contactUs">Kontakt<span class="sr-only">(current)</span></a></li>
-            </ul>
+                </ul>
+            </div>
         </div>
     </div>
+
 </nav>
 <!--Kasia - koniec navbaru-->
 
