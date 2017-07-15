@@ -216,7 +216,7 @@ shuffle(questions);
 
 // tutaj wstawiam moj timer ktory dziala tylko 1 raz
 
-var clock = function () {
+function clock () {
 
     var countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
     var timer = setInterval(function () {
@@ -243,28 +243,22 @@ var clock = function () {
 };
 
 
-// rozpoczynamy budowę naszj funkcji generującej quiz
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
 
-
-// Gdy mamy już listę pytań questions, to teraz pokażemy je na stronie:
-
     function showQuestions(questions, quizContainer) {
-        // potrzebujemy miejsca do przechowywania danych HTML
         var output = [];
         var answers;
-        // dla każdego pytania...
+        var next = document.getElementById('next');
+        var previous = document.getElementById('previous');
+        var currentSlide = 0;
+
         for (var i = 0; i < questions.length; i++) {
-            // będziemy chcieli zapisać listę opcji wyboru odpowiedzi
             answers = [];
-            // i dla każdej dostępnej odpowiedzi, których kolejność będzie losowana
             var keys = Object.keys(questions[i].answers);
             shuffle(keys);
-            clock();
             for (var j = 0; j < keys.length; j++) {
                 var letter = keys[j];
-                // ... dodamy radio-button HTML
                 answers.push(
                     '<label>'
                     + '<input type="radio" name="question' + i + '" value="' + letter + '">'
@@ -273,7 +267,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                     + '</label>'
                 );
             }
-            // teraz dodamy konkretne pytanie i ich odpowiedzi do HTML DOM
             output.push(
                 '<ul id="slides">'
                 +'<li class = "slide">'
@@ -295,50 +288,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 + '</ul>'
             );
         }
-
-        // ostatecznie połączymy naszą listę danych HTML w jeden ciąg HTML i umieścimy go na stronie
         quizContainer.innerHTML = output.join('');
 
-        // pojawiają się pojedyncze slajdy
-        var slides = document.querySelectorAll('#slides .slide');
-        var currentSlide = 0;
-        if (currentSlide == 0){
-            slides[currentSlide].className = 'slide showing';
-        }
-
-        // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
-        if (1 == 2) {
-            slides[currentSlide].className = 'slide';
-        }
-
-
-        function nextSlide() {
-            goToSlide(currentSlide+1);
-
-        }
-
-        function previousSlide() {
-            goToSlide(currentSlide-1);
-        }
-
-        function goToSlide(n) {
-            slides[currentSlide].className = 'slide';
-            currentSlide = (n+slides.length)%slides.length;
-            slides[currentSlide].className = 'slide showing';
-            // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
-            if (1 == 2) {
-                slides[currentSlide].className = 'slide';
-            }
-
-        }
-
-
-        // zmieniamy slajdy przez kliknięcie w strzałkę
-        var next = document.getElementById('next');
-        var previous = document.getElementById('previous');
-
         next.onclick = function() {
-          //  pauseSlideshow();
             if (currentSlide == (slides.length - 1)){
                 console.log('Tutaj');
             } else {
@@ -352,24 +304,50 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 previousSlide();
             }
         };
+        function nextSlide() {
+            goToSlide(currentSlide+1);
+        }
+        function previousSlide() {
+            goToSlide(currentSlide-1);
+        }
+        function goToSlide(n) {
+            slides[currentSlide].className = 'slide';
+            currentSlide = (n+slides.length)%slides.length;
+            slides[currentSlide].className = 'slide showing';
+
+            // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
+            // ?? do usuniecia ???
+
+            if (1 == 2) {
+                slides[currentSlide].className = 'slide';
+            }
+        }
+
+        var slides = document.querySelectorAll('#slides .slide');
+
+        if (currentSlide == 0){
+            slides[currentSlide].className = 'slide showing';
+
+        }
+
+        // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
+        // ?? o co chodzi ???
+        if (1 == 2) {
+            slides[currentSlide].className = 'slide';
+        }
 
     }
 
-// teraz możemy uruchomić funkcję
+
     showQuestions(questions, quizContainer);
 
-// Trzeci krok: Po naciśnnięciu przycisku submit - pokaż wyniki quizu
+
 
     function showResults(questions, quizContainer, resultsContainer) {
-
-        // zapisujemy odpowiedzi z quizu do zmiennej
         var answerContainers = quizContainer.querySelectorAll('.answers');
-
-        // śledzimy odpowiedzi użytkowników
         var userAnswer = '';
         var numCorrect = 0;
 
-        // dla każdego pytania ...
         for (var i = 0; i < questions.length; i++) {
             // znajdujemy zaznaczoną odpowiedź
             userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
