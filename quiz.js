@@ -285,16 +285,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
             intervalClear();
             timer();
-      //      console.log(timerInterval, timer)
             timerInterval = setInterval(timer, 100);
-
-            // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
-            // ?? do usuniecia ???
-
-            if (1 == 2) {
-                slides[currentSlide].className = 'slide';
-            }
         }
+
         countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
         timerInterval = setInterval(timer, 100);
 
@@ -330,13 +323,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         if (currentSlide == 0){
             slides[currentSlide].className = 'slide showing';
 
-
-        }
-
-        // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
-        // ?? o co chodzi ???
-        if (1 == 2) {
-            slides[currentSlide].className = 'slide';
         }
 
     }
