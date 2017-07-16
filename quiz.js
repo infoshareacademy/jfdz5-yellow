@@ -222,6 +222,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         var next = document.getElementById('next');
         var previous = document.getElementById('previous');
         var currentSlide = 0;
+        var timerInterval;
+        var countDownStartDate;
+        var slides;
 
         for (var i = 0; i < questions.length; i++) {
             answers = [];
@@ -279,8 +282,11 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             slides[currentSlide].className = 'slide';
             currentSlide = (n+slides.length)%slides.length;
             slides[currentSlide].className = 'slide showing';
-            clearInterval(timer);
-            clock();
+            countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
+            intervalClear();
+            timer();
+      //      console.log(timerInterval, timer)
+            timerInterval = setInterval(timer, 100);
 
             // tu jest warunek, który trzeba poprawić na 1==1, który trzeba połączyć z timerem dla całej gry, aby slajdy znikły po zakończonym czasie odliczania
             // ?? do usuniecia ???
@@ -289,8 +295,16 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 slides[currentSlide].className = 'slide';
             }
         }
-        var countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
-        var timer = setInterval(function () {
+        countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
+        timerInterval = setInterval(timer, 100);
+
+        function intervalClear (countDownStartDate) {
+            $('#timer').removeClass('red');
+            $('#notice').removeClass('red');
+            clearInterval(timerInterval);
+        }
+
+        function timer() {
             var now = new Date().getTime();
             var distance = countDownStartDate - now;
             var seconds = Math.floor(distance / 1000);
@@ -299,7 +313,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 $('#notice').text('time is running');
             }
             else if (distance < 0) {
-                clearInterval(timer);
+                clearInterval(timerInterval);
                 $('#timer').text('EXPIRED !!!');
                 $('#notice').text('EXPIRED !!!');
                 nextSlide();
@@ -309,45 +323,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 $('#notice').text('HURRY UP !!!').addClass('red');
             }
             console.log("zegart tyka " + distance);
-        }, 100);
-
-        function clock (timer, countDownStartDate) {
-            $('#timer').removeClass('red');
-            $('#notice').removeClass('red');
-
         }
 
-
-
-
-        /*
-        function clock () {
-            $('#timer').removeClass('red');
-            $('#notice').removeClass('red');
-            var countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
-            var timer = setInterval(function () {
-                var now = new Date().getTime();
-                var distance = countDownStartDate - now;
-                var seconds = Math.floor(distance / 1000);
-                if (distance >= 5 * 1000) {
-                    $('#timer').text(seconds);
-                    $('#notice').text('time is running');
-                }
-                else if (distance < 0) {
-                    clearInterval(timer);
-                    $('#timer').text('EXPIRED !!!');
-                    $('#notice').text('EXPIRED !!!');
-                    nextSlide();
-                }
-                else {
-                    $('#timer').text(seconds).addClass('red');
-                    $('#notice').text('HURRY UP !!!').addClass('red');
-                }
-                console.log("zegart tyka " + distance);
-            }, 100);
-        };
-*/
-        var slides = document.querySelectorAll('#slides .slide');
+        slides = document.querySelectorAll('#slides .slide');
 
         if (currentSlide == 0){
             slides[currentSlide].className = 'slide showing';
