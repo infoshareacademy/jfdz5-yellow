@@ -289,9 +289,41 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 slides[currentSlide].className = 'slide';
             }
         }
+        var countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
+        var timer = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownStartDate - now;
+            var seconds = Math.floor(distance / 1000);
+            if (distance >= 5 * 1000) {
+                $('#timer').text(seconds);
+                $('#notice').text('time is running');
+            }
+            else if (distance < 0) {
+                clearInterval(timer);
+                $('#timer').text('EXPIRED !!!');
+                $('#notice').text('EXPIRED !!!');
+                nextSlide();
+            }
+            else {
+                $('#timer').text(seconds).addClass('red');
+                $('#notice').text('HURRY UP !!!').addClass('red');
+            }
+            console.log("zegart tyka " + distance);
+        }, 100);
 
+        function clock (timer, countDownStartDate) {
+            $('#timer').removeClass('red');
+            $('#notice').removeClass('red');
+
+        }
+
+
+
+
+        /*
         function clock () {
-
+            $('#timer').removeClass('red');
+            $('#notice').removeClass('red');
             var countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
             var timer = setInterval(function () {
                 var now = new Date().getTime();
@@ -299,29 +331,27 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 var seconds = Math.floor(distance / 1000);
                 if (distance >= 5 * 1000) {
                     $('#timer').text(seconds);
-                    $('#notice').text('waiting for info');
+                    $('#notice').text('time is running');
                 }
                 else if (distance < 0) {
                     clearInterval(timer);
                     $('#timer').text('EXPIRED !!!');
                     $('#notice').text('EXPIRED !!!');
-                    $('#trigger').text('TRIGGER SENT TO CHANGE QUESTION !!!');
                     nextSlide();
                 }
                 else {
                     $('#timer').text(seconds).addClass('red');
                     $('#notice').text('HURRY UP !!!').addClass('red');
                 }
-                console.log("zegart tyka" + distance);
+                console.log("zegart tyka " + distance);
             }, 100);
-
         };
-
+*/
         var slides = document.querySelectorAll('#slides .slide');
 
         if (currentSlide == 0){
             slides[currentSlide].className = 'slide showing';
-            clock();
+
 
         }
 
