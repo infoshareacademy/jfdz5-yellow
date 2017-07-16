@@ -2,46 +2,13 @@
  * Created by magda on 11/07/17.
  */
 
-/*
- Pierwszy krok: Budujemy strukturę gry
- 1) w pliku indexQuiz.html - HTML
- 2) w pliku quiz.js - JavaSript:
-
- function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-
- function showQuestions(questions, quizContainer){
- ---- code will go here ----
- }
- function showResults(questions, quizContainer, resultsContainer){
- ---- code will go here ----
- }
-
- --- show the questions ---
- showQuestions (questions, quizContainer);
-
- --- when user clicks submit, show results
- submitButton.onclick = function(){
- showResults(questions, quizContainer, resultsContainer);
- }
-
- }
- */
 var shuffle = function (arr) {
     for (var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
     return arr;
 };
-
-// "łapiemy" znaczniki HTML i zapisujemy odniesienia do tych elementów w zmiennych
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
-
-/*
- Drugi krok: Pokazujemy pytania quizu
- Do quizu potrzebujemy pytań i odpowiedzi, więc musimy zbudować obiekt, po którym łatwo nam będzie iterować:
- - wszystkie pytania umieścimy w tablicy,
- - każde pojedyncze pytanie wraz z przypisanymi doń odpowiedziami i wskazaniem na odpowiedź prawidłową umieścimy w obiekcie
- */
 var questions = [
     {
         question: "Z jakiej fontanny słynie Gdańsk?",
@@ -258,44 +225,52 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         quizContainer.innerHTML = output.join('');
 
         next.onclick = function() {
-            if (currentSlide == (slides.length - 1)){
-                console.log('Tutaj');
+            if (currentSlide === slides.length - 1) {
+                console.log('jestesmy na ostatnim slajdzie', currentSlide);
             } else {
                 nextSlide();
             }
         };
-        previous.onclick = function() {
-            if (currentSlide == 0){
-                console.log('Tutaj');
-            } else {
-                previousSlide();
-            }
-        };
         function nextSlide() {
-            goToSlide(currentSlide+1);
-        }
-        function previousSlide() {
-            goToSlide(currentSlide-1);
+            console.log('jestesmy na ' + currentSlide);
+         //   if ( currentSlide < slides.length - 1) {
+//
+        //        console.log('PRZALACZAM');
+
+        //    }
+            if ( currentSlide + 1 === slides.length - 1) {
+                console.log('MOJ WARUNEK DZIALA');
+                return lastSlide(slides.length);
+            }
+            currentSlide+=1;
+            return goToSlide(currentSlide);
         }
         function goToSlide(n) {
-            slides[currentSlide].className = 'slide';
-            currentSlide = (n+slides.length)%slides.length;
+            slides[currentSlide-1].className = 'slide';
+       //     currentSlide = (n+slides.length)%slides.length;
             slides[currentSlide].className = 'slide showing';
             countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
             intervalClear();
             timer();
             timerInterval = setInterval(timer, 100);
         }
+        function lastSlide(n) {
+            console.log('taki mamy n' + n);
+            slides[currentSlide - 1].className = 'slide';
+            slides[currentSlide].className = 'slide showing';
+            countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
+            intervalClear();
+            timerLastQuestion();
+            timerInterval = setInterval(timerLastQuestion, 100);
+        }
 
         countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
         timerInterval = setInterval(timer, 100);
-
         function intervalClear (countDownStartDate) {
             $('#timer').removeClass('red');
             $('#notice').removeClass('red');
             clearInterval(timerInterval);
         }
-
         function timer() {
             var now = new Date().getTime();
             var distance = countDownStartDate - now;
@@ -314,20 +289,40 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 $('#timer').text(seconds).addClass('red');
                 $('#notice').text('HURRY UP !!!').addClass('red');
             }
-            console.log("zegart tyka " + distance);
+         //   console.log("zegart tyka " + distance);
+        }
+
+        function timerLastQuestion() {
+            var now = new Date().getTime();
+            var distance = countDownStartDate - now;
+            var seconds = Math.floor(distance / 1000);
+            if (distance >= 5 * 1000) {
+                $('#timer').text(seconds);
+                $('#notice').text('time is running');
+            }
+            else if (distance < 0) {
+                clearInterval(timerInterval);
+                $('#timer').text('EXPIRED !!!');
+                $('#notice').text('EXPIRED !!!');
+            }
+            else {
+                $('#timer').text(seconds).addClass('red');
+                $('#notice').text('HURRY UP !!!').addClass('red');
+            }
+         //   console.log("zegart tyka " + distance);
         }
 
         slides = document.querySelectorAll('#slides .slide');
-
         if (currentSlide == 0){
             slides[currentSlide].className = 'slide showing';
-
         }
-
     }
-
-
     showQuestions(questions, quizContainer);
+
+
+
+
+
 
 
 
