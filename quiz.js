@@ -224,11 +224,15 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         }
         quizContainer.innerHTML = output.join('');
 
-        next.onclick = function nextSlide() {
+        function nextSlide() {
             currentSlide += 1;
             console.log('jestesmy na slajdzie ' + currentSlide);
             goToSlide(currentSlide);
         }
+
+        next.onclick = function () {
+            nextSlide();
+        };
 
         function goToSlide(n) {
             slides[currentSlide - 1].className = 'slide';
