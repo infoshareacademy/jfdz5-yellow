@@ -233,14 +233,15 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         };
 
         function nextSlide() {
+            currentSlide += 1;
+            console.log('jestesmy na slajdzie ' + currentSlide);
    //         if (currentSlide < slides.length - 1) {
      //       }
             if (currentSlide === slides.length - 1) {
-                console.log('MOJ WARUNEK DZIALA');
+                console.log('ostatni slajd');
                 return lastSlide(slides.length);
             }
-            currentSlide += 1;
-            console.log('jestesmy na slajdzie' + currentSlide);
+
             return goToSlide(currentSlide);
         }
 
@@ -255,7 +256,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         }
 
         function lastSlide(n) {
-            console.log('taki mamy n' + n);
             slides[currentSlide - 1].className = 'slide';
             slides[currentSlide].className = 'slide showing';
             countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
