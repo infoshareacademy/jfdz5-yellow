@@ -186,11 +186,11 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         var output = [];
         var answers;
         var next = document.getElementById('next');
-        var previous = document.getElementById('previous');
         var currentSlide = 0;
         var timerInterval;
         var countDownStartDate;
         var slides;
+        $('#submit').hide();
 
         for (var i = 0; i < questions.length; i++) {
             answers = [];
@@ -224,48 +224,31 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         }
         quizContainer.innerHTML = output.join('');
 
-        next.onclick = function () {
-            if (currentSlide === slides.length - 1) {
-                console.log('jestesmy na ostatnim slajdzie', currentSlide);
-            } else {
-                nextSlide();
-            }
-        };
-
-        function nextSlide() {
+        next.onclick = function nextSlide() {
             currentSlide += 1;
             console.log('jestesmy na slajdzie ' + currentSlide);
-   //         if (currentSlide < slides.length - 1) {
-     //       }
-            if (currentSlide === slides.length - 1) {
-                console.log('ostatni slajd');
-                return lastSlide(slides.length);
-            }
-
-            return goToSlide(currentSlide);
+            goToSlide(currentSlide);
         }
 
         function goToSlide(n) {
             slides[currentSlide - 1].className = 'slide';
-            currentSlide = (n+slides.length)%slides.length;
             slides[currentSlide].className = 'slide showing';
             countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
             intervalClear();
-            timer();
-            timerInterval = setInterval(timer, 100);
-        }
-
-        function lastSlide(n) {
-            slides[currentSlide - 1].className = 'slide';
-            slides[currentSlide].className = 'slide showing';
-            countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
-            intervalClear();
-            timerLastQuestion();
-            timerInterval = setInterval(timerLastQuestion, 100);
+            if (currentSlide !== slides.length - 1) {
+                timer();
+                timerInterval = setInterval(timer, 100);
+            }
+            else {
+                timerLastQuestion();
+                timerInterval = setInterval(timerLastQuestion, 100);
+                console.log('ostatni slajd');
+            }
         }
 
         countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
         timerInterval = setInterval(timer, 100);
+
         function intervalClear(countDownStartDate) {
             $('#timer').removeClass('red');
             $('#notice').removeClass('red');
@@ -290,13 +273,13 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 $('#timer').text(seconds).addClass('red');
                 $('#notice').text('HURRY UP !!!').addClass('red');
             }
-            //   console.log("zegart tyka " + distance);
         }
 
         function timerLastQuestion() {
             var now = new Date().getTime();
             var distance = countDownStartDate - now;
             var seconds = Math.floor(distance / 1000);
+            $('.buttons').hide();
             if (distance >= 5 * 1000) {
                 $('#timer').text(seconds);
                 $('#notice').text('time is running');
@@ -304,13 +287,14 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             else if (distance < 0) {
                 clearInterval(timerInterval);
                 $('#timer').text('EXPIRED !!!');
-                $('#notice').text('EXPIRED !!!');
+                $('#notice').text('Dziękujemy za grę');
+                $('#submit').show();
+                slides[currentSlide].className = 'slide';
             }
             else {
                 $('#timer').text(seconds).addClass('red');
                 $('#notice').text('HURRY UP !!!').addClass('red');
             }
-            //   console.log("zegart tyka " + distance);
         }
 
         slides = document.querySelectorAll('#slides .slide');

@@ -87,6 +87,7 @@ body{
 }
 
 #submit{
+    display: block;
     background-color: #279;
     font-size: 20px;
     color: white;
@@ -94,7 +95,6 @@ body{
     border-radius: 3px;
     padding: 20px;
     cursor: pointer;
-    display: block;
     margin: auto;
 }
 
