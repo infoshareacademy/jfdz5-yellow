@@ -208,8 +208,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             }
             output.push(
                 '<ul id="slides">'
-                +'<li class = "slide">'
-                +'<div class="question">'
+                + '<li class = "slide">'
+                + '<div class="question">'
                 + questions[i].question
                 + '</div>'
                 + '<div class="picture">'
@@ -224,36 +224,36 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         }
         quizContainer.innerHTML = output.join('');
 
-        next.onclick = function() {
+        next.onclick = function () {
             if (currentSlide === slides.length - 1) {
                 console.log('jestesmy na ostatnim slajdzie', currentSlide);
             } else {
                 nextSlide();
             }
         };
-        function nextSlide() {
-            console.log('jestesmy na ' + currentSlide);
-         //   if ( currentSlide < slides.length - 1) {
-//
-        //        console.log('PRZALACZAM');
 
-        //    }
-            if ( currentSlide + 1 === slides.length - 1) {
+        function nextSlide() {
+   //         if (currentSlide < slides.length - 1) {
+     //       }
+            if (currentSlide === slides.length - 1) {
                 console.log('MOJ WARUNEK DZIALA');
                 return lastSlide(slides.length);
             }
-            currentSlide+=1;
+            currentSlide += 1;
+            console.log('jestesmy na slajdzie' + currentSlide);
             return goToSlide(currentSlide);
         }
+
         function goToSlide(n) {
-            slides[currentSlide-1].className = 'slide';
-       //     currentSlide = (n+slides.length)%slides.length;
+            slides[currentSlide - 1].className = 'slide';
+            currentSlide = (n+slides.length)%slides.length;
             slides[currentSlide].className = 'slide showing';
             countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
             intervalClear();
             timer();
             timerInterval = setInterval(timer, 100);
         }
+
         function lastSlide(n) {
             console.log('taki mamy n' + n);
             slides[currentSlide - 1].className = 'slide';
@@ -266,11 +266,12 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
         countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
         timerInterval = setInterval(timer, 100);
-        function intervalClear (countDownStartDate) {
+        function intervalClear(countDownStartDate) {
             $('#timer').removeClass('red');
             $('#notice').removeClass('red');
             clearInterval(timerInterval);
         }
+
         function timer() {
             var now = new Date().getTime();
             var distance = countDownStartDate - now;
@@ -289,7 +290,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 $('#timer').text(seconds).addClass('red');
                 $('#notice').text('HURRY UP !!!').addClass('red');
             }
-         //   console.log("zegart tyka " + distance);
+            //   console.log("zegart tyka " + distance);
         }
 
         function timerLastQuestion() {
@@ -309,21 +310,16 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 $('#timer').text(seconds).addClass('red');
                 $('#notice').text('HURRY UP !!!').addClass('red');
             }
-         //   console.log("zegart tyka " + distance);
+            //   console.log("zegart tyka " + distance);
         }
 
         slides = document.querySelectorAll('#slides .slide');
-        if (currentSlide == 0){
+        if (currentSlide == 0) {
             slides[currentSlide].className = 'slide showing';
         }
     }
+
     showQuestions(questions, quizContainer);
-
-
-
-
-
-
 
 
     function showResults(questions, quizContainer, resultsContainer) {
