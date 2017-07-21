@@ -1,6 +1,5 @@
 /*** Kasia ***/
 body {
-    /*padding-top: 50px;*/
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
 }
@@ -28,20 +27,55 @@ nav .menu {
 
 nav .nav__link {
     display: inline;
-    color: #777;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    transition: 200ms all linear;
+    vertical-align: middle;
+    -webkit-transform: perspective(3px) translateZ(0);
+    transform: perspective(3px) translateZ(0);
+    position: relative;
+    cursor: pointer;
+         }
+
+nav .nav__link:before {
+    content: '';
+    position: absolute;
+    border: transparent solid 2px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: top, right, bottom, left;
+    transition-property: top, right, bottom, left;
+}
+
+nav .nav__link:hover:before, .nav__link:focus:before, .nav__link:active:before {
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    border-color: rgba(104, 172, 234, 0.61);
+    box-shadow: 0 0 4px #68acea;
+    font-weight: 800;
+}
+
+nav a {
+    color: #68acea;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1pt;
-    margin: 0px 20px 0px 20px;
-    overflow: hidden;
-    transition: 200ms all linear;
-         }
-
-nav nav__link:hover {
-    text-decoration: none;
-    background-color: hsla(220, 79%, 54%, 0.61);
-    ;
 }
+
+nav a:hover {
+    text-decoration: none;
+    font-weight: 800;
+    color: #68acea;
+    }
+
+
 
 nav .nav__link__active {
     background: hsla(220, 79%, 54%, 0.61);
