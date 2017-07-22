@@ -6,9 +6,9 @@ var shuffle = function (arr) {
     for (var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
     return arr;
 };
-var quizContainer = document.getElementById('quiz');
-var resultsContainer = document.getElementById('results');
-var submitButton = document.getElementById('submit');
+var quizContainer = document.getElementById('gm-quiz');
+var resultsContainer = document.getElementById('gm-results');
+var submitButton = document.getElementById('gm-submit');
 var questions = [
     {
         question: "Z jakiej fontanny słynie Gdańsk?",
@@ -185,12 +185,12 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
     function showQuestions(questions, quizContainer) {
         var output = [];
         var answers;
-        var next = document.getElementById('next');
+        var next = document.getElementById('gm-next');
         var currentSlide = 0;
         var timerInterval;
         var countDownStartDate;
         var slides;
-        $('#submit').hide();
+        $('#gm-submit').hide();
 
         for (var i = 0; i < questions.length; i++) {
             answers = [];
@@ -207,15 +207,15 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 );
             }
             output.push(
-                '<ul id="slides">'
-                + '<li class = "slide">'
-                + '<div class="question">'
+                '<ul id="gm-slides">'
+                + '<li class = "gm-slide">'
+                + '<div class="gm-question">'
                 + questions[i].question
                 + '</div>'
-                + '<div class="picture">'
+                + '<div class="gm-picture">'
                 + '<img src="' + questions[i].picture + '">'
                 + '</div>'
-                + '<div class="answers">'
+                + '<div class="gm-answers">'
                 + answers.join('')
                 + '</div>'
                 + '</li>'
@@ -235,8 +235,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         };
 
         function goToSlide(n) {
-            slides[currentSlide - 1].className = 'slide';
-            slides[currentSlide].className = 'slide showing';
+            slides[currentSlide - 1].className = 'gm-slide';
+            slides[currentSlide].className = 'gm-slide gm-showing';
             countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
             intervalClear();
             if (currentSlide !== slides.length - 1) {
@@ -254,8 +254,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         timerInterval = setInterval(timer, 100);
 
         function intervalClear(countDownStartDate) {
-            $('#timer').removeClass('red');
-            $('#notice').removeClass('red');
+            $('#gm-timer').removeClass('gm-red');
+            $('#gm-notice').removeClass('gm-red');
             clearInterval(timerInterval);
         }
 
@@ -264,18 +264,18 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             var distance = countDownStartDate - now;
             var seconds = Math.floor(distance / 1000);
             if (distance >= 5 * 1000) {
-                $('#timer').text(seconds);
-                $('#notice').text('time is running');
+                $('#gm-timer').text(seconds);
+                $('#gm-notice').text('time is running');
             }
             else if (distance < 0) {
                 clearInterval(timerInterval);
-                $('#timer').text('EXPIRED !!!');
-                $('#notice').text('EXPIRED !!!');
+                $('#gm-timer').text('EXPIRED !!!');
+                $('#gm-notice').text('EXPIRED !!!');
                 nextSlide();
             }
             else {
-                $('#timer').text(seconds).addClass('red');
-                $('#notice').text('HURRY UP !!!').addClass('red');
+                $('#gm-timer').text(seconds).addClass('gm-red');
+                $('#gm-notice').text('HURRY UP !!!').addClass('gm-red');
             }
         }
 
@@ -283,27 +283,27 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             var now = new Date().getTime();
             var distance = countDownStartDate - now;
             var seconds = Math.floor(distance / 1000);
-            $('.buttons').hide();
+            $('.gm-buttons').hide();
             if (distance >= 5 * 1000) {
-                $('#timer').text(seconds);
-                $('#notice').text('time is running');
+                $('#gm-timer').text(seconds);
+                $('#gm-notice').text('time is running');
             }
             else if (distance < 0) {
                 clearInterval(timerInterval);
-                $('#timer').text('EXPIRED !!!');
-                $('#notice').text('Dziękujemy za grę');
-                $('#submit').show();
-                slides[currentSlide].className = 'slide';
+                $('#gm-timer').text('EXPIRED !!!');
+                $('#gm-notice').text('Dziękujemy za grę');
+                $('#gm-submit').show();
+                slides[currentSlide].className = 'gm-slide';
             }
             else {
-                $('#timer').text(seconds).addClass('red');
-                $('#notice').text('HURRY UP !!!').addClass('red');
+                $('#gm-timer').text(seconds).addClass('gm-red');
+                $('#gm-notice').text('HURRY UP !!!').addClass('gm-red');
             }
         }
 
-        slides = document.querySelectorAll('#slides .slide');
+        slides = document.querySelectorAll('#gm-slides .gm-slide');
         if (currentSlide == 0) {
-            slides[currentSlide].className = 'slide showing';
+            slides[currentSlide].className = 'gm-slide gm-showing';
         }
     }
 
@@ -311,7 +311,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
 
     function showResults(questions, quizContainer, resultsContainer) {
-        var answerContainers = quizContainer.querySelectorAll('.answers');
+        var answerContainers = quizContainer.querySelectorAll('.gm-answers');
         var userAnswer = '';
         var numCorrect = 0;
 
