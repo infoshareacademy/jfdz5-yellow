@@ -250,7 +250,15 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             }
         }
 
-        countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
+        countDownStartDate = function () {
+            console.log('uruchomiono zegar');
+            $('#gm-start-button').on('click', function () {
+                console.log('klinelismy w buton');
+                return ( new Date().getTime() ) + 8 * 1000
+            })
+        };
+
+ //       countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
         timerInterval = setInterval(timer, 100);
 
         function intervalClear(countDownStartDate) {
