@@ -407,5 +407,7 @@ h5 {
 }
 
 /***  Kuba modal  ***/
-
+.gm-modal-body {
+    height: 800px;
+}
 

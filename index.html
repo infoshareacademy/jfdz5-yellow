@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="styleQuiz.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!-- ikonka strony = favicon wykonana na stronie faviconer.com -->
@@ -80,89 +81,69 @@
 <!--TUTAJ CONTENT MODALA Z GRA-->
 
 
-    <div class="modal fade" id="modal-instruction" data-modal-index="1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title">Baw się razem z nami !!!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Nasza gra jest bardzo prosta. Oczywiście jeżeli znasz Gdańsk ! Wystarczy, że zaznaczysz poprawną
-                        odpowiedź na każde z 15 pytań a zdobędziesz maksymalną liczbę punktów. Uważaj bo jest jednak mały
-                        haczyk. Na każde pytanie masz tylko 8 sekund na odpowiedź, jeżeli nie zmieścisz się w limicie czasu
-                        to automatycznie zostaniesz przekierowany na następne pytanie. Po udzieleniu odpowiedzi na 15
-                        pytanie będziesz mógł zobaczyć swój wynik.</p>
+<div class="modal fade" id="modal-instruction" data-modal-index="1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">Baw się razem z nami !!!</h4>
+            </div>
+            <div class="modal-body">
+                <p>Nasza gra jest bardzo prosta. Oczywiście jeżeli znasz Gdańsk ! Wystarczy, że zaznaczysz poprawną
+                    odpowiedź na każde z 15 pytań a zdobędziesz maksymalną liczbę punktów. Uważaj bo jest jednak mały
+                    haczyk. Na każde pytanie masz tylko 8 sekund na odpowiedź, jeżeli nie zmieścisz się w limicie czasu
+                    to automatycznie zostaniesz przekierowany na następne pytanie. Po udzieleniu odpowiedzi na 15
+                    pytanie będziesz mógł zobaczyć swój wynik.</p>
 
-                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-game">ROZPOCZNIJ GRĘ</button>
+                <button class="btn btn-default" data-toggle="modal" data-target="#modal-game" id="gm-start-button">ROZPOCZNIJ GRĘ</button>
 
-                    <p>A może już jesteś niecierpliwy i chciałbyś zobaczyć jakie wyniki osiągają najlepsi</p>
+                <p>A może już jesteś niecierpliwy i chciałbyś zobaczyć jakie wyniki osiągają najlepsi</p>
 
-                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-rank">POKAŻ WYNIKI</button>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+                <button class="btn btn-default" data-toggle="modal" data-target="#modal-rank">POKAŻ WYNIKI</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="modal fade" id="modal-game" data-modal-index="2">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title">Zagrajmy w grę !</h4>
+<div class="modal fade" id="modal-game" data-modal-index="2">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">Zagrajmy w grę !</h4>
+            </div>
+            <div class="modal-body gm-modal-body">
+                <!--TUTAJ KOD Z GRA-->
+
+                <div class="gm-timer">
+                    <h1 id="gm-timer">STATIC TIMER</h1>
+                    <h2 id="gm-notice">STATIC INFORMATION</h2>
                 </div>
-                <div class="modal-body">
-                    <p>Nasza gra jest bardzo prosta. Oczywiście jeżeli znasz Gdańsk ! Wystarczy, że zaznaczysz poprawną
-                        odpowiedź na każde z 15 pytań a zdobędziesz maksymalną liczbę punktów. Uważaj bo jest jednak mały
-                        haczyk. Na każde pytanie masz tylko 8 sekund na odpowiedź, jeżeli nie zmieścisz się w limicie czasu
-                        to automatycznie zostaniesz przekierowany na następne pytanie. Po udzieleniu odpowiedzi na 15
-                        pytanie będziesz mógł zobaczyć swój wynik.</p>
-
-                    <p>Nasza gra jest bardzo prosta. Oczywiście jeżeli znasz Gdańsk ! Wystarczy, że zaznaczysz poprawną
-                        odpowiedź na każde z 15 pytań a zdobędziesz maksymalną liczbę punktów. Uważaj bo jest jednak mały
-                        haczyk. Na każde pytanie masz tylko 8 sekund na odpowiedź, jeżeli nie zmieścisz się w limicie czasu
-                        to automatycznie zostaniesz przekierowany na następne pytanie. Po udzieleniu odpowiedzi na 15
-                        pytanie będziesz mógł zobaczyć swój wynik.</p>
-
-                    <p>Nasza gra jest bardzo prosta. Oczywiście jeżeli znasz Gdańsk ! Wystarczy, że zaznaczysz poprawną
-                        odpowiedź na każde z 15 pytań a zdobędziesz maksymalną liczbę punktów. Uważaj bo jest jednak mały
-                        haczyk. Na każde pytanie masz tylko 8 sekund na odpowiedź, jeżeli nie zmieścisz się w limicie czasu
-                        to automatycznie zostaniesz przekierowany na następne pytanie. Po udzieleniu odpowiedzi na 15
-                        pytanie będziesz mógł zobaczyć swój wynik.</p>
-
-                    <p>Nasza gra jest bardzo prosta. Oczywiście jeżeli znasz Gdańsk ! Wystarczy, że zaznaczysz poprawną
-                        odpowiedź na każde z 15 pytań a zdobędziesz maksymalną liczbę punktów. Uważaj bo jest jednak mały
-                        haczyk. Na każde pytanie masz tylko 8 sekund na odpowiedź, jeżeli nie zmieścisz się w limicie czasu
-                        to automatycznie zostaniesz przekierowany na następne pytanie. Po udzieleniu odpowiedzi na 15
-                        pytanie będziesz mógł zobaczyć swój wynik.</p>
-
-                    <p>Nasza gra jest bardzo prosta. Oczywiście jeżeli znasz Gdańsk ! Wystarczy, że zaznaczysz poprawną
-                        odpowiedź na każde z 15 pytań a zdobędziesz maksymalną liczbę punktów. Uważaj bo jest jednak mały
-                        haczyk. Na każde pytanie masz tylko 8 sekund na odpowiedź, jeżeli nie zmieścisz się w limicie czasu
-                        to automatycznie zostaniesz przekierowany na następne pytanie. Po udzieleniu odpowiedzi na 15
-                        pytanie będziesz mógł zobaczyć swój wynik.</p>
-
-                    <p>Nasza gra jest bardzo prosta. Oczywiście jeżeli znasz Gdańsk ! Wystarczy, że zaznaczysz poprawną
-                        odpowiedź na każde z 15 pytań a zdobędziesz maksymalną liczbę punktów. Uważaj bo jest jednak mały
-                        haczyk. Na każde pytanie masz tylko 8 sekund na odpowiedź, jeżeli nie zmieścisz się w limicie czasu
-                        to automatycznie zostaniesz przekierowany na następne pytanie. Po udzieleniu odpowiedzi na 15
-                        pytanie będziesz mógł zobaczyć swój wynik.</p>
+                <div id="gm-quiz"></div>
+                <div class="gm-buttons">
+                    <button class="gm-controls" id="gm-next">&gt;</button>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+                <button id="gm-submit">Podsumuj Quiz</button>
+                <div id="gm-results"></div>
+
+
+                <!--TUTAJ KOD Z GRA-->
             </div>
         </div>
     </div>
+</div>
 
 <div class="modal fade" id="modal-rank" data-modal-index="2">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
                 <h4 class="modal-title">Ranking</h4>
             </div>
             <div class="modal-body">
@@ -242,7 +223,8 @@
                     </form>
                 </div>
 
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-instruction">Open
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-instruction">
+                    Open
                     Modal
                 </button>
 
@@ -544,6 +526,15 @@
 <script src="contactPhotosTransition.js"></script>
 <script src="backToTop.js"></script>
 <script src="modal.js"></script>
+<script>
+    $('#gm-start-button').on('click', function () {
+        $.getScript('quiz.js', function () {
+        });
+    });
+</script>
+
+<!-- <script src="quiz.js"></script> -->
+
 <script src="multilinguism.js"></script>
 
 </body>

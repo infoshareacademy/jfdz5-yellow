@@ -290,7 +290,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             }
             else if (distance < 0) {
                 clearInterval(timerInterval);
-                $('#gm-timer').text('EXPIRED !!!');
+                $('#gm-timer').text('Koniec czasu !!!');
                 $('#gm-notice').text('Dziękujemy za grę');
                 $('#gm-submit').show();
                 slides[currentSlide].className = 'gm-slide';
