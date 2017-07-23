@@ -412,3 +412,23 @@ h5 {
 .gm-rank-body {
     height: 400px;
 }
+.btn-start-game {
+    margin: 30px;
+    background-color: red;
+    color: white;
+}
+.btn-start-game:hover {
+    background-color: yellow;
+}
+.modal-instruction {
+    text-align: center;
+    padding: 45px 45px 15px;
+}
+.btn-rank {
+    margin: 30px;
+}
+.modal-instruction-head {
+    background-color: lightgrey;
+    color: red;
+    text-align: center;
+}

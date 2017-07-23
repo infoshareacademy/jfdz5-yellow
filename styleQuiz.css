@@ -3,7 +3,6 @@
 }
 
 .gm-question{
-    font-weight: 300;
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -22,7 +21,6 @@
 .gm-answers{
     margin-bottom: 20px;
     margin-top: 20px;
-    color: black;
     text-align: center;
 }
 
@@ -110,7 +108,6 @@ STYLE KUBY TIMER START
     color: red;
 }
 .gm-timer{
-    font-weight: 300;
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
