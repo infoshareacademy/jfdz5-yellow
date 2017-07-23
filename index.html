@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="styleQuiz.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!-- ikonka strony = favicon wykonana na stronie faviconer.com -->
@@ -61,16 +62,123 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav navbar-right navi">
-                <li class="nav__link"><a data-scroll href="#landmarks" id="monument">Atrakcje<span class="sr-only">(current)</span></a></li>
-                <li class="nav__link"><a data-scroll href="#events" id="event">Wydarzenia<span class="sr-only">(current)</span></a></li>
-                <li class="nav__link"><a data-scroll href="#tickets" id="buy">Kup bilet<span class="sr-only">(current)</span></a></li>
-                <li class="nav__link"><a data-scroll href="#adds" id="add">Dodaj wydarzenie<span class="sr-only">(current)</span></a></li>
-                <li class="nav__link"><a data-scroll href="#contact" id="contactUs">Kontakt<span class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a data-scroll href="#landmarks" id="monument">Atrakcje<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav__link"><a data-scroll href="#events" id="event">Wydarzenia<span
+                        class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a data-scroll href="#tickets" id="buy">Kup bilet<span
+                        class="sr-only">(current)</span></a></li>
+                <li class="nav__link"><a data-scroll href="#adds" id="add">Dodaj wydarzenie<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav__link"><a data-scroll href="#contact" id="contactUs">Kontakt<span class="sr-only">(current)</span></a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 <!--Kasia - koniec navbaru-->
+
+<!--TUTAJ CONTENT MODALA Z GRA-->
+
+
+<div class="modal fade" id="modal-instruction" data-modal-index="1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">Baw się razem z nami !!!</h4>
+            </div>
+            <div class="modal-body">
+                <p>Nasza gra jest bardzo prosta. Oczywiście jeżeli znasz Gdańsk ! Wystarczy, że zaznaczysz poprawną
+                    odpowiedź na każde z 15 pytań a zdobędziesz maksymalną liczbę punktów. Uważaj bo jest jednak mały
+                    haczyk. Na każde pytanie masz tylko 8 sekund na odpowiedź, jeżeli nie zmieścisz się w limicie czasu
+                    to automatycznie zostaniesz przekierowany na następne pytanie. Po udzieleniu odpowiedzi na 15
+                    pytanie będziesz mógł zobaczyć swój wynik.</p>
+
+                <button class="btn btn-default" data-toggle="modal" data-target="#modal-game" id="gm-start-button">ROZPOCZNIJ GRĘ</button>
+
+                <p>A może już jesteś niecierpliwy i chciałbyś zobaczyć jakie wyniki osiągają najlepsi</p>
+
+                <button class="btn btn-default" data-toggle="modal" data-target="#modal-rank">POKAŻ WYNIKI</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-game" data-modal-index="2">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">Zagrajmy w grę !</h4>
+            </div>
+            <div class="modal-body gm-modal-body">
+                <!--TUTAJ KOD Z GRA-->
+
+                <div class="gm-timer">
+                    <h1 id="gm-timer">STATIC TIMER</h1>
+                    <h2 id="gm-notice">STATIC INFORMATION</h2>
+                </div>
+                <div id="gm-quiz"></div>
+                <div class="gm-buttons">
+                    <button class="gm-controls" id="gm-next">&gt;</button>
+                </div>
+                <button id="gm-submit">Podsumuj Quiz</button>
+                <div id="gm-results"></div>
+
+
+                <!--TUTAJ KOD Z GRA-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-rank" data-modal-index="2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">Ranking</h4>
+            </div>
+            <div class="modal-body">
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+                <p>TUTAJ BEDZIE RANKING</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--TUTAJ CONTENT MODALA Z GRA-->
 
 <!--Poczatek Kasia - header-->
 <header>
@@ -105,12 +213,24 @@
                 <div>
                     <h1 id="bigTitle">GDAŃSK PEŁNY WRAŻEŃ</h1>
                 </div>
+
+                <!--TUTAJ PRZYCISK URUCHAMIAJACY MODALA Z GRA-->
+
                 <div>
                     <form>
                         <input class="button" type="button" value="Baw się z nami!"
                                onclick="window.location.href='#newsletter'"/>
                     </form>
                 </div>
+
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-instruction">
+                    Open
+                    Modal
+                </button>
+
+                <!--TUTAJ PRZYCISK URUCHAMIAJACY MODALA Z GRA-->
+
+
                 <div>
                     <h2 id="stimulus">Dla mieszkańców i turystów - dowiedz się, co najlepszego nasze miasto może ci
                         zaoferować.
@@ -127,7 +247,8 @@
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>f
+    </div>
+    f
 </header>
 
 <!--Kasia - koniec headera-->
@@ -135,7 +256,7 @@
 <main>
     <!-- Magda - Spis planowanych funkcji produktu = sekcja mainFunctions -->
 
-        <section class="mainFunctions">
+    <section class="mainFunctions">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-3 funmain landmarks target" id="landmarks">
@@ -153,23 +274,24 @@
                     <p id="eventsP">Sprawdź, jakie imprezy planowane są w Gdańsku i zaplanuj przyjazd na wybrane
                         wydarzenia.</p>
                 </div>
-            <div class="col-sm-6 col-md-3 funmain tickets target" id="tickets">
-                <h3 id="buyTicketH3">Kup bilet</h3>
-                <div class="mainFunctions__logo mainFunctions__logoTickets"></div>
-                <h4 id="buyTicketH4">Bilety na wydarzenia</h4>
-                <p id="buyTicketP">Skorzystaj z rabatów przedsprzedaży lub last-minute - kup bilety i nie przegap
-                    atrakcyjnych
-                    imprez.</p>
+                <div class="col-sm-6 col-md-3 funmain tickets target" id="tickets">
+                    <h3 id="buyTicketH3">Kup bilet</h3>
+                    <div class="mainFunctions__logo mainFunctions__logoTickets"></div>
+                    <h4 id="buyTicketH4">Bilety na wydarzenia</h4>
+                    <p id="buyTicketP">Skorzystaj z rabatów przedsprzedaży lub last-minute - kup bilety i nie przegap
+                        atrakcyjnych
+                        imprez.</p>
+                </div>
+                <div class="col-sm-6 col-md-3 funmain adds target" id="adds">
+                    <h3 id="addEventH3">Dodaj wydarzenie</h3>
+                    <div class="mainFunctions__logo mainFunctions__logoAdds"></div>
+                    <h4 id="addEventH4">Twoje wydarzenie w sieci</h4>
+                    <p id="addEventP">Jeśli organizujesz jakieś wydarzenie w Gdańsku, dodaj je do naszego kalendarza, a
+                        my je zaprezentujemy.</p>
+                </div>
             </div>
-             <div class="col-sm-6 col-md-3 funmain adds target" id="adds">
-            <h3 id="addEventH3">Dodaj wydarzenie</h3>
-            <div class="mainFunctions__logo mainFunctions__logoAdds"></div>
-            <h4 id="addEventH4">Twoje wydarzenie w sieci</h4>
-            <p id="addEventP">Jeśli organizujesz jakieś wydarzenie w Gdańsku, dodaj je do naszego kalendarza, a
-                my je zaprezentujemy.</p>
-            </div>
-         </div>
-        </div></section>
+        </div>
+    </section>
     <!-- Magda - koniec sekcji mainFunctions -->
 
     <!-- Kuba - początek Newsletter -->
@@ -300,71 +422,73 @@
 
 
                 <div class="row target" id="contact">
-                <div class="col-sm-4 person">
-                    <div class="photo">
-                        <img class="img-circle left" src="img/magdalenaw.jpg" alt="Magda">
+                    <div class="col-sm-4 person">
+                        <div class="photo">
+                            <img class="img-circle left" src="img/magdalenaw.jpg" alt="Magda">
+                        </div>
+                        <h5 class="text-bold">Magdalena Wojnicka</h5>
+                        <ul>
+                            <li id="mw1">Projektantka / kierownik projektów</li>
+                            <li id="mw2">Kocham wszystko, co proste, piękne i funkcjonalne</li>
+                            <li id="mw3">Uwielbiam się uczyć, rozwijać i dążyć do celu</li>
+                        </ul>
+                        <div class="icons">
+                            <a href="mailto:michalak_jakub@yahoo.pl">
+                                <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
+                            <a href="https://pl.linkedin.com/in/michalakjakub">
+                                <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
+                            <i class="fa fa-instagram" style="font-size:2.25em"></i>
+                            <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
+                        </div>
                     </div>
-                    <h5 class="text-bold">Magdalena Wojnicka</h5>
-                    <ul>
-                        <li id="mw1">Projektantka / kierownik projektów</li>
-                        <li id="mw2">Kocham wszystko, co proste, piękne i funkcjonalne</li>
-                        <li id="mw3">Uwielbiam się uczyć, rozwijać i dążyć do celu</li>
-                    </ul>
-                    <div class="icons">
-                        <a href="mailto:michalak_jakub@yahoo.pl">
-                            <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
-                        <a href="https://pl.linkedin.com/in/michalakjakub">
-                            <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
-                        <i class="fa fa-instagram" style="font-size:2.25em"></i>
-                        <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
+
+                    <div class="col-sm-4 person">
+                        <div class="photo">
+                            <img class="img-circle center" src="img/katarzynas.jpg" alt="Kasia">
+                        </div>
+
+                        <h5 class="text-bold center">Katarzyna Sitarz</h5>
+                        <ul>
+                            <li id="ks1">Filolożka klasyczna</li>
+                            <li id="ks2">Nałogowa konsumentka estetyki</li>
+                            <li id="ks3">Koneserka przyjemności, niezależnie od ich rozmiarów</li>
+                        </ul>
+                        <div class="icons">
+                            <a href="mailto:katarzyna.sitarz@gmail.com">
+                                <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
+                            <a href="https://pl.linkedin.com/in/katarzyna-sitarz">
+                                <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
+                            <i class="fa fa-instagram" style="font-size:2.25em"></i>
+                            <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
+                        </div>
                     </div>
+
+                    <div class="col-sm-4 person">
+                        <div class="photo">
+                            <img class="img-circle right" src="img/jakubm.jpg" alt="Kuba">
+                        </div>
+
+                        <h5 class="text-bold">Jakub Michalak</h5>
+                        <ul>
+                            <li id="jm1">To mój pierwszy projekt www</li>
+                            <li id="jm2">Z wykształcenia jestem mgr inż. budownictwa</li>
+                            <li id="jm3">W wolnym czasie gram we frisbee, tenis, biegam, a także interesuję się
+                                lotnictwem
+                            </li>
+                        </ul>
+                        <div class="icons">
+                            <a href="mailto:michalak_jakub@yahoo.pl">
+                                <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
+                            <a href="https://pl.linkedin.com/in/michalakjakub">
+                                <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
+                            <i class="fa fa-instagram" style="font-size:2.25em"></i>
+                            <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="col-sm-4 person">
-                    <div class="photo">
-                        <img class="img-circle center" src="img/katarzynas.jpg" alt="Kasia">
-                    </div>
-
-                    <h5 class="text-bold center">Katarzyna Sitarz</h5>
-                    <ul>
-                        <li id="ks1">Filolożka klasyczna</li>
-                        <li id="ks2">Nałogowa konsumentka estetyki</li>
-                        <li id="ks3">Koneserka przyjemności, niezależnie od ich rozmiarów</li>
-                    </ul>
-                    <div class="icons">
-                        <a href="mailto:katarzyna.sitarz@gmail.com">
-                            <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
-                        <a href="https://pl.linkedin.com/in/katarzyna-sitarz">
-                            <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
-                        <i class="fa fa-instagram" style="font-size:2.25em"></i>
-                        <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
-                    </div>
-                </div>
-
-                <div class="col-sm-4 person">
-                    <div class="photo">
-                        <img class="img-circle right" src="img/jakubm.jpg" alt="Kuba">
-                    </div>
-
-                    <h5 class="text-bold">Jakub Michalak</h5>
-                    <ul>
-                        <li id="jm1">To mój pierwszy projekt www</li>
-                        <li id="jm2">Z wykształcenia jestem mgr inż. budownictwa</li>
-                        <li id="jm3">W wolnym czasie gram we frisbee, tenis, biegam, a także interesuję się lotnictwem
-                        </li>
-                    </ul>
-                    <div class="icons">
-                        <a href="mailto:michalak_jakub@yahoo.pl">
-                            <i class="fa fa-envelope" style="font-size:2.25em"></i></a>
-                        <a href="https://pl.linkedin.com/in/michalakjakub">
-                            <i class="fa fa-linkedin-square" style="font-size:2.25em"></i></a>
-                        <i class="fa fa-instagram" style="font-size:2.25em"></i>
-                        <i class="fa fa-facebook-square" style="font-size:2.25em"></i>
-                    </div>
-                </div>
-
             </div>
-            </div></section>
+        </section>
     </div>
     <!--KONIEC CZESCI KUBA - kontakt-->
 </main>
@@ -401,6 +525,18 @@
 <script src="cookies.js"></script>
 <script src="contactPhotosTransition.js"></script>
 <script src="backToTop.js"></script>
+<script src="modal.js"></script>
+
+<!--
+<script>
+    $('#gm-start-button').on('click', function () {
+        $.getScript('quiz.js', function () {
+        });
+    });
+</script>
+-->
+<script src="quiz.js"></script>
+
 <script src="multilinguism.js"></script>
 
 </body>

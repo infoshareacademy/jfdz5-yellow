@@ -404,3 +404,9 @@ h5 {
     background-color: grey;
     cursor: pointer;
 }
+
+/***  Kuba modal  ***/
+.gm-modal-body {
+    height: 800px;
+}
+
