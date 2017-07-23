@@ -9,6 +9,7 @@ var shuffle = function (arr) {
 var quizContainer = document.getElementById('gm-quiz');
 var resultsContainer = document.getElementById('gm-results');
 var submitButton = document.getElementById('gm-submit');
+
 var questions = [
     {
         question: "Z jakiej fontanny słynie Gdańsk?",
@@ -186,6 +187,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         var output = [];
         var answers;
         var next = document.getElementById('gm-next');
+        var start = document.getElementById('gm-start-button');
         var currentSlide = 0;
         var timerInterval;
         var countDownStartDate;
@@ -224,12 +226,19 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         }
         quizContainer.innerHTML = output.join('');
 
+        function returnStartDate() {
+            countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
+        }
+        start.onclick = function () {
+            console.log('kliknieto na start');
+            returnStartDate();
+        };
+
         function nextSlide() {
             currentSlide += 1;
             console.log('jestesmy na slajdzie ' + currentSlide);
             goToSlide(currentSlide);
         }
-
         next.onclick = function () {
             nextSlide();
         };
@@ -250,15 +259,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             }
         }
 
-        countDownStartDate = function () {
-            console.log('uruchomiono zegar');
-            $('#gm-start-button').on('click', function () {
-                console.log('klinelismy w buton');
-                return ( new Date().getTime() ) + 8 * 1000
-            })
-        };
-
- //       countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
         timerInterval = setInterval(timer, 100);
 
         function intervalClear(countDownStartDate) {
