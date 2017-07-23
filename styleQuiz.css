@@ -31,7 +31,7 @@
     display: block;
 }
 
-#gm-slides {
+.gm-slides {
     position: relative;
     padding: 0px;
     margin: 0px;
@@ -82,9 +82,8 @@
 
 #gm-submit{
     display: block;
-    background-color: #279;
+    background-color: yellow;
     font-size: 20px;
-    color: white;
     border: 0px;
     border-radius: 3px;
     padding: 20px;
@@ -95,14 +94,14 @@
 
 
 #gm-submit:hover{
-    background-color: #38a;
+    background-color: lightgrey;
 }
 
 #gm-results{
-    color: #38a;
     text-align: center;
     box-sizing: border-box;
     padding: 20px;
+    font-weight: 700;
 }
 
 /*

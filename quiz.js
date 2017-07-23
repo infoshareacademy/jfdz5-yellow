@@ -208,7 +208,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 );
             }
             output.push(
-                '<ul id="gm-slides">'
+                '<ul class="gm-slides">'
                 + '<li class = "gm-slide">'
                 + '<div class="gm-question">'
                 + questions[i].question
@@ -297,6 +297,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             }
             else if (distance < 0) {
                 clearInterval(timerInterval);
+                $('#gm-timer').removeClass('gm-red');
+                $('#gm-notice').removeClass('gm-red');
                 $('#gm-timer').text('Koniec czasu !!!');
                 $('#gm-notice').text('Dziękujemy za grę');
                 $('#gm-submit').show();
@@ -309,7 +311,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             }
         }
 
-        slides = document.querySelectorAll('#gm-slides .gm-slide');
+        slides = document.querySelectorAll('.gm-slides .gm-slide');
         if (currentSlide == 0) {
             slides[currentSlide].className = 'gm-slide gm-showing';
         }
