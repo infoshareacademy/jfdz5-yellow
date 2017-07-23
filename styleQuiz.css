@@ -3,9 +3,12 @@
 }
 
 .gm-question{
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 20px;
+    padding: 0 60px;
     text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
 }
 
 
@@ -15,7 +18,7 @@
 }
 
 .gm-picture img{
-    width: 500px;
+    height: 300px;
 }
 
 .gm-answers{
@@ -71,7 +74,7 @@
 
 .gm-buttons{
     position: absolute;
-    left: 0px;
+    right: 15px;
     top: 0px;
     z-index: 10;
     font-size: 0px;
@@ -87,6 +90,7 @@
     padding: 20px;
     cursor: pointer;
     margin: auto;
+    z-index: 100;
 }
 
 
@@ -108,8 +112,7 @@ STYLE KUBY TIMER START
     color: red;
 }
 .gm-timer{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 0;
     text-align: center;
 }
 /*

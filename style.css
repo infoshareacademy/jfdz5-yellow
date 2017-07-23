@@ -407,7 +407,7 @@ h5 {
 
 /***  Kuba modal  ***/
 .gm-modal-body {
-    height: 800px;
+    height: 615px;
 }
 .gm-rank-body {
     height: 400px;
@@ -431,4 +431,7 @@ h5 {
     background-color: lightgrey;
     color: red;
     text-align: center;
+}
+#gm-quiz label {
+    font-weight: 400;
 }

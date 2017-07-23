@@ -77,7 +77,7 @@ var questions = [
         correctAnswer: "b"
     },
     {
-        question: "Park gdański słynący między innymi z bogatych iluminacji bożonarodzeniowych to:",
+        question: "Park słynący między innymi z bogatych iluminacji bożonarodzeniowych to:",
         answers: {
             a: "Park Akademicki",
             b: "Park Kuźniczki",
@@ -301,6 +301,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 $('#gm-notice').text('Dziękujemy za grę');
                 $('#gm-submit').show();
                 slides[currentSlide].className = 'gm-slide';
+                $('#gm-quiz').hide();
             }
             else {
                 $('#gm-timer').text(seconds).addClass('gm-red');
