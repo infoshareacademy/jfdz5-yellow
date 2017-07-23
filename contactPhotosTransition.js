@@ -15,7 +15,6 @@ $(document).scroll(function() {
         $('.img-circle').addClass('active');
     }
 });
-
 */
 
 $(window).scroll(function() {

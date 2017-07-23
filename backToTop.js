@@ -9,7 +9,6 @@ function onOff () {
         x.style.display = "none";
     }
 }
-
 $(window).scroll(function() {
     var height = $(window).scrollTop();
 

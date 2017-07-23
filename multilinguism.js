@@ -1,7 +1,6 @@
 /**
  * Created by magda on 29/06/17.
  */
-
 /*
 ta funkcja ma za zadanie:
 1) wyszukać i zwrócić część querystring z URI (location.search.substring)

@@ -4,7 +4,6 @@
  /* podświetlenie sekcji w menu */
 
 
-
 $(window).on('scroll', function () {
     $('.target').each(function () {
         if ($(window).scrollTop() >= $(this).position().top) {

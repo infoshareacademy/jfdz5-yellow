@@ -9,7 +9,6 @@ var shuffle = function (arr) {
 var quizContainer = document.getElementById('gm-quiz');
 var resultsContainer = document.getElementById('gm-results');
 var submitButton = document.getElementById('gm-submit');
-
 var questions = [
     {
         question: "Z jakiej fontanny słynie Gdańsk?",

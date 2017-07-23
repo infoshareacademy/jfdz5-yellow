@@ -20,7 +20,6 @@ function getCookie(cname) {
     }
     return "";
 }
-
 function checkCookie() {
     var user = getCookie("username");
     if (user != "") {

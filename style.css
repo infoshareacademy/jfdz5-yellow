@@ -409,4 +409,6 @@ h5 {
 .gm-modal-body {
     height: 800px;
 }
-
+.gm-rank-body {
+    height: 400px;
+}
