@@ -197,14 +197,9 @@
                 <div>
                     <form>
                         <input class="button" type="button" value="Baw się z nami!"
-                               onclick="window.location.href='#newsletter'"/>
+                               data-toggle="modal" data-target="#modal-instruction"/>
                     </form>
                 </div>
-
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-instruction">
-                    Open
-                    Modal
-                </button>
 
                 <!--TUTAJ PRZYCISK URUCHAMIAJACY MODALA Z GRA-->
 
@@ -503,15 +498,6 @@
 <script src="contactPhotosTransition.js"></script>
 <script src="backToTop.js"></script>
 <script src="modal.js"></script>
-
-<!--
-<script>
-    $('#gm-start-button').on('click', function () {
-        $.getScript('quiz.js', function () {
-        });
-    });
-</script>
--->
 <script src="quiz.js"></script>
 
 <script src="multilinguism.js"></script>
