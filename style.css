@@ -7,26 +7,26 @@ body {
 
 /*** Kasia navbar ***/
 
-nav .navbar-default {
+nav.navbar-default {
     background-color: seashell;
     padding-top: 0;
     color: #777;
-    transition: 200ms all linear;
-  }
+      }
 
-nav .nav__link {
+nav.navbar .nav__link {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1pt;
-}
     overflow: hidden;
     transition: 200ms all linear;
          }
 
-nav .nav__link__active {
-    background: hsla(220, 79%, 54%, 0.61);
-    transition: 200ms all linear;
-        }
+
+
+nav.navbar .nav__link:hover nav__link:focus nav__link:active {
+    transition: 0.5s all linear;
+    background: #79a9e6;
+    }
 
 nav .navbar-brand {
     padding-top: 0px;
@@ -39,16 +39,16 @@ nav .navbar-brand .img-responsive {
     transition: 200ms all linear;
      }
 
-nav.small {
+nav.navbar.small {
     min-height: 20px;
     max-height: 20px;
 }
 
-nav.small .nav>li>a {
+nav.navbar.small .nav>li>a {
     display: inline;
 }
 
-nav.small .navbar-brand .img-responsive {
+nav.navbar.small .navbar-brand .img-responsive {
     max-width: 20px;
     max-height: 20px;
     transition: 200ms all linear;
