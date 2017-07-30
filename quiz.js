@@ -187,6 +187,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         var answers;
         var next = document.getElementById('gm-next');
         var start = document.getElementById('gm-start-button');
+        var closeButton = document.getElementById('game-close');
         var currentSlide = 0;
         var timerInterval;
         var countDownStartDate;
@@ -232,6 +233,10 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             console.log('kliknieto na start');
             returnStartDate();
         };
+        closeButton.onclick = function () {
+            console.log('kliknieto close button');
+            clearInterval(timerInterval);
+        };
 
         function nextSlide() {
             currentSlide += 1;
@@ -241,6 +246,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         next.onclick = function () {
             nextSlide();
         };
+
 
         function goToSlide(n) {
             slides[currentSlide - 1].className = 'gm-slide';
