@@ -357,5 +357,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         showResults(questions, quizContainer, resultsContainer);
     }
 
+    
 // a teraz generujemy nasz quiz
 generateQuiz(questions, quizContainer, resultsContainer, submitButton);
