@@ -13,6 +13,7 @@ nav.navbar {
     color: #777;
       }
 
+
 nav.navbar .nav__link {
     text-transform: uppercase;
     font-weight: 600;
@@ -20,11 +21,6 @@ nav.navbar .nav__link {
     overflow: hidden;
     transition: 200ms all linear;
          }
-
-nav.navbar .nav__link__active {
-    transition: 0.5s all linear;
-    background: #79a9e6;
-    }
 
 nav .navbar-brand {
     padding-top: 0px;
@@ -52,7 +48,15 @@ nav.navbar.small .navbar-brand .img-responsive {
     transition: 200ms all linear;
 }
 
+@media screen and (max-width: 770px) {
+    nav.navbar {
+        min-height: 50px !important;
+    }
+}
 
+.highlite {
+    background: repeating-linear-gradient(to right, #fbfbfb, #fbfbfb 10px, #fff 10px, #fff 20px);
+}
 
     /*** koniec navbara ***/
 
@@ -276,7 +280,7 @@ input[type=submit]:hover {
 }
 
 .person {
-    background-color: white;
+    background-color: transparent;
 }
 
 .img-circle {
@@ -309,8 +313,7 @@ h5 {
 
 .text-bold {
     font-weight: bold;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
     padding: 1em 0em;
 }
 
