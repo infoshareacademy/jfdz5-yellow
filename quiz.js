@@ -357,6 +357,49 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         showResults(questions, quizContainer, resultsContainer);
     }
 
-    
+    // dajemy czadu z results and localStorage
+
+    function saveResults(result){
+        var results;
+        if (!localStorage.results) {
+            results = new Array();
+        } else {
+            results = JSON.parse(localStorage.results);
+        }
+
+
+        var dateObj = new Date();
+        var month = dateObj.getUTCMonth() + 1; //months from 1-12
+        var day = dateObj.getUTCDate();
+        var year = dateObj.getUTCFullYear();
+
+        var seconds = dateObj.getSeconds();
+        var minutes = dateObj.getMinutes();
+        var hour = dateObj.getHours();
+
+        var newdate = year + "/" + month + "/" + day + " "+ hour + ":" + minutes + ":" + seconds;
+
+        result.unshift(newdate);
+
+        results.unshift(result);
+
+        if (results.length >= 4){
+            results.pop();
+        }
+
+        //localStorage.setItem("results",JSON.stringify(results) )
+        localStorage.results = JSON.stringify(results);
+        return results;
+        //console.log(my_table_after);
+    }
+
+    var result = new Array();
+    result[0] = 13;
+    result[1] = 15;
+
+    var results = saveResults(result);
+
+    console.log(results);
+}
 // a teraz generujemy nasz quiz
 generateQuiz(questions, quizContainer, resultsContainer, submitButton);
