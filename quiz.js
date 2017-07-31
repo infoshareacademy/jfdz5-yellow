@@ -9,6 +9,7 @@ var shuffle = function (arr) {
 var quizContainer = document.getElementById('gm-quiz');
 var resultsContainer = document.getElementById('gm-results');
 var submitButton = document.getElementById('gm-submit');
+var rankingButton = document.getElementById('gm-ranking');
 var questions = [
     {
         question: "Z jakiej fontanny słynie Gdańsk?",
@@ -229,6 +230,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         function returnStartDate() {
             countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
         }
+
         start.onclick = function () {
             console.log('kliknieto na start');
             returnStartDate();
@@ -243,6 +245,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             console.log('jestesmy na slajdzie ' + currentSlide);
             goToSlide(currentSlide);
         }
+
         next.onclick = function () {
             nextSlide();
         };
@@ -339,67 +342,73 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             if (userAnswer === questions[i].correctAnswer) {
                 // dodaj do liczby poprawnych opowiedzi
                 numCorrect++;
-                // zakoloruj tę odpowiedź na zielono
-                answerContainers[i].style.color = 'lightgreen';
-            }
-            // jeśli odpowiedź jest nieprawidłowa
-            else {
-                // zakoloruj tę odpowiedź na czerwono
-                answerContainers[i].style.color = 'red';
             }
         }
-// pokazujemy ilość poprawnych odpowiedzi w stosunku do wszystkich
+        // pokazujemy ilość poprawnych odpowiedzi w stosunku do wszystkich
         resultsContainer.innerHTML = 'Twój wynik: ' + numCorrect + ' na ' + questions.length;
+
+ //       var return_results = [];
+ //       return_results[0] = numCorrect;
+ //       return_results[1] = questions.length;
+ //       saveResults(return_results);
     }
 
-// po naciśnięciu przycisku submit, pokazujemy rezultaty quizu
+    // po naciśnięciu przycisku submit, pokazujemy rezultaty quizu
     submitButton.onclick = function () {
         showResults(questions, quizContainer, resultsContainer);
     }
+}
 
-    // dajemy czadu z results and localStorage
+/*
+function saveResults(result) {
+    var results;
+    if (!localStorage.results) {
+        results = [];
+    } else {
+        results = JSON.parse(localStorage.results);
+    }
+}
 
-    function saveResults(result){
-        var results;
-        if (!localStorage.results) {
-            results = new Array();
-        } else {
-            results = JSON.parse(localStorage.results);
-        }
+var dateObj = new Date();
+var month = dateObj.getUTCMonth() + 1; //months from 1-12
+var day = dateObj.getUTCDate();
+var year = dateObj.getUTCFullYear();
+
+var seconds = dateObj.getSeconds();
+var minutes = dateObj.getMinutes();
+var hour = dateObj.getHours();
+
+var newdate = year + "/" + month + "/" + day + " " + hour + ":" + minutes + ":" + seconds;
+
+result.unshift(newdate);
+
+results.unshift(result);
+
+if (results.length >= 4) {
+    results.pop();
+}
+
+//localStorage.setItem("results",JSON.stringify(results) )
+localStorage.results = (results);
+//   console.log(results);
+//   return results;
 
 
-        var dateObj = new Date();
-        var month = dateObj.getUTCMonth() + 1; //months from 1-12
-        var day = dateObj.getUTCDate();
-        var year = dateObj.getUTCFullYear();
-
-        var seconds = dateObj.getSeconds();
-        var minutes = dateObj.getMinutes();
-        var hour = dateObj.getHours();
-
-        var newdate = year + "/" + month + "/" + day + " "+ hour + ":" + minutes + ":" + seconds;
-
-        result.unshift(newdate);
-
-        results.unshift(result);
-
-        if (results.length >= 4){
-            results.pop();
-        }
-
-        //localStorage.setItem("results",JSON.stringify(results) )
-        localStorage.results = JSON.stringify(results);
-        return results;
-        //console.log(my_table_after);
+function getResults() {
+    var results;
+    if (!localStorage.results) {
+        results = [];
+    } else {
+        results = JSON.parse(localStorage.results);
     }
 
-    var result = new Array();
-    result[0] = 13;
-    result[1] = 15;
-
-    var results = saveResults(result);
-
-    console.log(results);
+    return results;
 }
+
+// po naciśnięciu przycisku, pokazujemy rezultaty quizu
+rankingButton.onclick = function () {
+    ................
+} */
+
 // a teraz generujemy nasz quiz
 generateQuiz(questions, quizContainer, resultsContainer, submitButton);
