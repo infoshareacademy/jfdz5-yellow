@@ -1,0 +1,54 @@
+<html>
+<head></head>
+<body>
+		<script type="text/javascript">
+
+
+			function save_results(result){
+
+                var results;
+				if (!localStorage.results) { // jeżeli
+					results = new Array();
+				} else {
+					results = JSON.parse(localStorage.results);
+				}
+			
+			
+				var dateObj = new Date();
+				var month = dateObj.getUTCMonth() + 1; //months from 1-12
+				var day = dateObj.getUTCDate();
+				var year = dateObj.getUTCFullYear();
+			
+				var seconds = dateObj.getSeconds();
+				var minutes = dateObj.getMinutes();
+				var hour = dateObj.getHours();
+
+				var newdate = year + "/" + month + "/" + day + " "+ hour + ":" + minutes + ":" + seconds;
+
+				result.unshift(newdate);
+
+				results.unshift(result);
+			
+				if (results.length >= 4){
+					results.pop();
+				}
+
+				//localStorage.setItem("results",JSON.stringify(results) )
+				localStorage.results = JSON.stringify(results);
+				return results;
+				//console.log(my_table_after);
+			}
+			
+			var result = new Array();
+			result[0] = 13;
+			result[1] = 15;
+			
+			var results = save_results(result);
+			
+			console.log(results);
+
+			
+		//alert( data[3] ); // "strawberry"
+		</script>		
+</body>
+</html>

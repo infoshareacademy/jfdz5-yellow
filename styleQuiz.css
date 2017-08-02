@@ -1,0 +1,124 @@
+.gm-quiz {
+    position: absolute;
+}
+
+.gm-question {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 0 60px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+
+.gm-picture {
+    max-width: 100%;
+    text-align: center;
+}
+
+.gm-picture img {
+    height: 300px;
+}
+
+.gm-answers {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.gm-answers label {
+    display: block;
+}
+
+.gm-slides {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.gm-slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+}
+
+
+.gm-showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+.gm-controls {
+    background: grey;
+    color: #fff;
+    padding: 10px 0px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+    border: 2px solid #fff;
+    width: 70px;
+}
+
+.gm-controls:hover,
+.gm-controls:focus {
+    background: #eee;
+    color: #333;
+}
+
+.gm-buttons {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    z-index: 10;
+    font-size: 0px;
+}
+
+#gm-submit {
+    display: block;
+    background-color: yellow;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin: auto;
+    z-index: 100;
+}
+
+
+#gm-submit:hover {
+    background-color: lightgrey;
+}
+
+#gm-results {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    font-weight: 700;
+}
+
+#gm-localstorage {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+/*
+STYLE KUBY TIMER START
+*/
+.gm-red {
+    color: red;
+}
+.gm-timer{
+    margin: 0;
+    text-align: center;
+}
+/*
+STYLE KUBY TIMER END
+*/

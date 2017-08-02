@@ -2,43 +2,73 @@
 body {
     padding-top: 50px;
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 /*** Kasia navbar ***/
-nav .navbar-default {
-    background-color: seashell;
-    padding-top: 0;
-}
 
-nav .nav__link {
+nav.navbar {
+    margin-bottom: 0px;
+    padding-top: 0;
+    color: #777;
+      }
+
+nav.navbar .nav__link {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1pt;
-}
+    overflow: hidden;
+    transition: 200ms all linear;
+         }
+
+nav.navbar .nav__link__active {
+    transition: 0.5s all linear;
+    background: #79a9e6;
+    }
 
 nav .navbar-brand {
     padding-top: 0px;
-}
+    transition: 200ms all linear;
+   }
 
 nav .navbar-brand .img-responsive {
     max-width: 50px;
     max-height: 50px;
+    transition: 200ms all linear;
+     }
+
+nav.navbar.small {
+    min-height: 20px;
+    max-height: 20px;
 }
 
-/*** koniec navbara ***/
+nav.navbar.small .nav>li>a {
+    display: inline;
+}
+
+nav.navbar.small .navbar-brand .img-responsive {
+    max-width: 20px;
+    max-height: 20px;
+    transition: 200ms all linear;
+}
+
+
+
+    /*** koniec navbara ***/
+
 /*** Kasia header***/
-.backgroundImage {
+
+.flex-carousel {
     height: 100%;
-    background-image: url("img/pano.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header h1 {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
     color: seashell;
+    text-shadow: 3px 3px #000;
     margin: 3% 0 3% 0;
     padding: 1% 0 1% 0;
     letter-spacing: 3pt;
@@ -184,7 +214,6 @@ header h2 {
     background-color: #ffffff;
 }
 
-
 .newsletter label {
     line-height: 25px;
     color: white;
@@ -254,16 +283,24 @@ input[type=submit]:hover {
     border-radius: 50%;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    -webkit-transition: .2s ease-in-out;
-    transition: .2s ease-in-out;
     margin-top: 1em;
     height: 150px;
     width: 150px;
+    opacity: 0.0;
+    transition: transform 2000ms ease, opacity 1500ms ease;
 }
-
-.img-circle:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
+.img-circle.left {
+    transform: scale(1) translate3d(-250%,0,0);
+}
+.img-circle.center {
+    transform: scale(1) translate3d(0,-250%,0);
+}
+.img-circle.right {
+    transform: scale(1) translate3d(250%,0,0);
+}
+.img-circle.active {
+    opacity: 1.0;
+    transform: scale(1) translate3d(0,0,0);
 }
 
 h5 {
@@ -317,3 +354,84 @@ h5 {
 }
 
 /*** Kasia koniec footra ***/
+
+/***  Magda arrow - scroll to top  ***/
+
+.arrowTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+/***  Kuba cookies  ***/
+.cookie {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 5px;
+    padding-right: 15%;
+    padding-left: 10px;
+}
+
+.cookie.hidden {
+    display: none;
+}
+
+.acceptCookie {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.rejectCookie {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: grey;
+    cursor: pointer;
+}
+
+/***  Kuba modal  ***/
+.gm-modal-body {
+    height: 615px;
+}
+.gm-rank-body {
+    height: 400px;
+}
+.btn-start-game {
+    margin: 30px;
+    background-color: red;
+    color: white;
+}
+.btn-start-game:hover {
+    background-color: yellow;
+}
+.modal-instruction {
+    text-align: center;
+    padding: 45px 45px 15px;
+}
+.btn-rank {
+    margin: 30px;
+}
+.modal-instruction-head {
+    background-color: lightgrey;
+    color: red;
+    text-align: center;
+}
+#gm-quiz label {
+    font-weight: 400;
+}
