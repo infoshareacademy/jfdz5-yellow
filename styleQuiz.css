@@ -1,8 +1,8 @@
-.gm-quiz{
+.gm-quiz {
     position: absolute;
 }
 
-.gm-question{
+.gm-question {
     margin-top: 0px;
     margin-bottom: 20px;
     padding: 0 60px;
@@ -12,22 +12,22 @@
 }
 
 
-.gm-picture{
+.gm-picture {
     max-width: 100%;
     text-align: center;
 }
 
-.gm-picture img{
+.gm-picture img {
     height: 300px;
 }
 
-.gm-answers{
+.gm-answers {
     margin-bottom: 20px;
     margin-top: 20px;
     text-align: center;
 }
 
-.gm-answers label{
+.gm-answers label {
     display: block;
 }
 
@@ -55,7 +55,7 @@
     z-index: 2;
 }
 
-.gm-controls{
+.gm-controls {
     background: grey;
     color: #fff;
     padding: 10px 0px;
@@ -67,12 +67,12 @@
 }
 
 .gm-controls:hover,
-.gm-controls:focus{
+.gm-controls:focus {
     background: #eee;
     color: #333;
 }
 
-.gm-buttons{
+.gm-buttons {
     position: absolute;
     right: 15px;
     top: 0px;
@@ -80,7 +80,7 @@
     font-size: 0px;
 }
 
-#gm-submit{
+#gm-submit {
     display: block;
     background-color: yellow;
     font-size: 20px;
@@ -93,15 +93,20 @@
 }
 
 
-#gm-submit:hover{
+#gm-submit:hover {
     background-color: lightgrey;
 }
 
-#gm-results{
+#gm-results {
     text-align: center;
     box-sizing: border-box;
     padding: 20px;
     font-weight: 700;
+}
+
+#gm-localstorage {
+    font-weight: 700;
+    font-size: 25px;
 }
 
 /*

@@ -388,7 +388,7 @@ function saveResults(result) {
 
     // jeżeli do tablicy ma być zapisany czwarty element, to zostaje wyrzucona z niej ostatnia pozycja
     // tablica z wynikami ma zawierać trzy ostatnie wyniki rozgrywek
-    if (results.length >= 7) {
+    if (results.length >= 11) {
         results.pop();
     }
     // zapisujemy wyniki do lokalstorage
@@ -414,7 +414,7 @@ function getResults() {
     var line = "";
 
     for  (var k = 0; k < ranking.length; k++) {
-        line += ranking[k][0] +"  "+ranking[k][1] + "  "+ranking[k][2]+"<br/>";
+        line += ranking[k][0] + " " + " " + "=" + " " + ranking[k][1] + " " + " " + "/" + " " + ranking[k][2] + "<br/>";
     }
     document.getElementById("gm-localstorage").innerHTML = line;
 };
