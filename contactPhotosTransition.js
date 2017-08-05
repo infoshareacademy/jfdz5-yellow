@@ -35,4 +35,5 @@ $(window).scroll(function (event) {
     console.log('pozycja scrolla ' + $(window).scrollTop());
 });
 
+
  */

@@ -1,6 +1,5 @@
 
 
-
 /* menu zwężające się  */
 
 var isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") > -1;

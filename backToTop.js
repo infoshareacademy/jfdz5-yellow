@@ -30,3 +30,4 @@ $("img").click(function() {
         'slow');
 });
 
+

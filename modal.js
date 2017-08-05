@@ -1,4 +1,5 @@
 
+
 $('.btn[data-toggle=modal]').on('click', function(){
     var $btn = $(this);
     var currentDialog = $btn.closest('.modal-dialog'),
