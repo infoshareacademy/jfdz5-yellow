@@ -12,6 +12,7 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!-- ikonka strony = favicon wykonana na stronie faviconer.com -->
     <link href="MW_includes/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
 </head>
 <body>
 
@@ -99,7 +100,7 @@
 
                 <p>A może już jesteś niecierpliwy i chciałbyś zobaczyć jakie wyniki osiągają najlepsi ?</p>
 
-                <button class="btn btn-default btn-rank" data-toggle="modal" data-target="#modal-rank">POKAŻ WYNIKI</button>
+                <button id="gm-ranking" class="btn btn-default btn-rank" data-toggle="modal" data-target="#modal-rank">POKAŻ WYNIKI</button>
             </div>
         </div>
     </div>
@@ -122,11 +123,10 @@
                 </div>
                 <div id="gm-quiz"></div>
                 <div class="gm-buttons">
-                    <button class="gm-controls" id="gm-next">&gt;</button>
+                    <button class="gm-controls" id="gm-next"></button>
                 </div>
                 <button id="gm-submit">Podsumuj Quiz</button>
                 <div id="gm-results"></div>
-
 
                 <!--TUTAJ KOD Z GRA-->
             </div>
@@ -143,7 +143,7 @@
                 <h4 class="modal-title">Baw się razem z nami - Ranking</h4>
             </div>
             <div class="modal-body gm-rank-body">
-                <p>TUTAJ BEDZIE RANKING</p>
+                <p id="gm-localstorage"></p>
 
             </div>
         </div>
@@ -174,7 +174,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="img/pano3.jpg" alt="Gdansk - Plaza Jelitkowo">
+                <img src="img/pano4.png" alt="Gdansk - Dżwigi portowe">
                 <div class="carousel-caption">
                 </div>
             </div>
@@ -289,7 +289,7 @@
                         </div>
 
                         <input type="submit" value="Zapisz się"
-                               onclick="alert('Dziękujemy za zapisanie się! Jesteśmy w kontakcie!')">
+                               onclick="alert('Dziękujemy! Naciśnij przycisk BAW SIĘ Z NAMI !!! i zagraj w nasz quiz!')">
                     </form>
 
                     <p class="safety-info" id="newsletterInfo">Podane dane zostaną wykorzystane jedynie na potrzeby
@@ -493,7 +493,6 @@
 <script src="backToTop.js"></script>
 <script src="modal.js"></script>
 <script src="quiz.js"></script>
-
 <script src="multilinguism.js"></script>
 
 </body>

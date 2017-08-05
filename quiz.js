@@ -9,6 +9,7 @@ var shuffle = function (arr) {
 var quizContainer = document.getElementById('gm-quiz');
 var resultsContainer = document.getElementById('gm-results');
 var submitButton = document.getElementById('gm-submit');
+var rankingButton = document.getElementById('gm-ranking');
 var questions = [
     {
         question: "Z jakiej fontanny słynie Gdańsk?",
@@ -33,7 +34,7 @@ var questions = [
         correctAnswer: "c"
     },
     {
-        question: "Z jakiej twierdzy kontrolowano ruch statków w dawnym porcie gdańskim?",
+        question: "Ruch statków w dawnym porcie gdańskim kontrolowano z twierdzy ...",
         answers: {
             a: "Westerplatte",
             b: "Wisłoujście",
@@ -44,7 +45,7 @@ var questions = [
         correctAnswer: "b"
     },
     {
-        question: "Najważniejsze cykliczne wydarzenie w Gdańsku to:",
+        question: "Najważniejsze cykliczne wydarzenie w Gdańsku to ...",
         answers: {
             a: "Jarmark Dominikański",
             b: "Festiwal Tańca",
@@ -55,7 +56,7 @@ var questions = [
         correctAnswer: "a"
     },
     {
-        question: "W dniach 1-7 września 1939 roku dostępu do Gdańska broniono pod:",
+        question: "W dniach 1-7 września 1939 roku dostępu do Gdańska broniono pod ...",
         answers: {
             a: "Oliwą",
             b: "Kępą Oksywską",
@@ -66,7 +67,7 @@ var questions = [
         correctAnswer: "c"
     },
     {
-        question: "Średniowieczny dźwig portowy z bramą wodną Gdańska zlokalizowany nad Motławą to:",
+        question: "Średniowieczny dźwig portowy z bramą wodną nazywany jest ...",
         answers: {
             a: "Czapla",
             b: "Żuraw",
@@ -77,7 +78,7 @@ var questions = [
         correctAnswer: "b"
     },
     {
-        question: "Park słynący między innymi z bogatych iluminacji bożonarodzeniowych to:",
+        question: "Park słynący z bogatych iluminacji bożonarodzeniowych to ...",
         answers: {
             a: "Park Akademicki",
             b: "Park Kuźniczki",
@@ -88,7 +89,7 @@ var questions = [
         correctAnswer: "d"
     },
     {
-        question: "Gdańskie osiedle o planie urbanistycznym na kształt plastrów miodu to:",
+        question: "Gdańskie osiedle o planie urbanistycznym na kształt plastrów miodu to ...",
         answers: {
             a: "Zaspa",
             b: "Przymorze",
@@ -99,18 +100,18 @@ var questions = [
         correctAnswer: "a"
     },
     {
-        question: "Jaką nazwą określane są najdłuższe budynki mieszkalne w Polsce i w Gdańsku?",
+        question: "Najdłuższe budynki mieszkalne na gdańskim Przymorzu to ...",
         answers: {
             a: "łamańce",
             b: "liniowce",
             c: "falowce",
-            d: "wężownice"
+            d: "wężowce"
         },
         picture: "quiz_img/FalowiecObroncowWybrzeza.jpg",
         correctAnswer: "c"
     },
     {
-        question: "Stadion Energa Gdańsk to stadion klubowy ...?:",
+        question: "Stadion Energa Gdańsk to stadion klubowy ... ?",
         answers: {
             a: "Lechii",
             b: "Arki",
@@ -121,7 +122,7 @@ var questions = [
         correctAnswer: "a"
     },
     {
-        question: "Jaki pomnik stoi na Placu Solidarności nieopodal Bramy nr2 Stoczni Gdańskiej?:",
+        question: "Pomnik na Placu Solidarności nieopodal Bramy nr2 Stoczni Gdańskiej to ...",
         answers: {
             a: "Pomnik Tym, którzy nie wrócili z morza",
             b: "Pomnik Polskiego Państwa Podziemnego",
@@ -132,7 +133,7 @@ var questions = [
         correctAnswer: "c"
     },
     {
-        question: "Gdański teatr z otwieranym dachem, warty odwiedzenia ze względu na spektakle i architekturę to:",
+        question: "Gdański teatr z otwieranym dachem to ...",
         answers: {
             a: "Teatr Muzyczny",
             b: "Teatr Wybrzeże",
@@ -143,7 +144,7 @@ var questions = [
         correctAnswer: "d"
     },
     {
-        question: "Nowoczesny budynek muzealny, przy ul. Wałowej, na terenie historycznej Wiadrowni jest siedzibą:",
+        question: "Nowoczesny budynek muzealny przy ul. Wałowej jest siedzibą ...",
         answers: {
             a: "Muzeum Narodowego",
             b: "Muzeum II Wojny Światowej",
@@ -154,7 +155,7 @@ var questions = [
         correctAnswer: "b"
     },
     {
-        question: "Centrum prowadzące działalność edukacyjną, naukową, wydawniczą oraz wystawienniczą na terenie Młodego Miasta Gdańska to:",
+        question: "Nowoczesne centrum na terenie Młodego Miasta Gdańska to ...",
         answers: {
             a: "Europejskie Centrum Solidarności",
             b: "Olivia Business Centre",
@@ -229,6 +230,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         function returnStartDate() {
             countDownStartDate = ( new Date().getTime() ) + 8 * 1000;
         }
+
         start.onclick = function () {
             console.log('kliknieto na start');
             returnStartDate();
@@ -243,6 +245,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             console.log('jestesmy na slajdzie ' + currentSlide);
             goToSlide(currentSlide);
         }
+
         next.onclick = function () {
             nextSlide();
         };
@@ -339,24 +342,80 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             if (userAnswer === questions[i].correctAnswer) {
                 // dodaj do liczby poprawnych opowiedzi
                 numCorrect++;
-                // zakoloruj tę odpowiedź na zielono
-                answerContainers[i].style.color = 'lightgreen';
-            }
-            // jeśli odpowiedź jest nieprawidłowa
-            else {
-                // zakoloruj tę odpowiedź na czerwono
-                answerContainers[i].style.color = 'red';
             }
         }
-// pokazujemy ilość poprawnych odpowiedzi w stosunku do wszystkich
+        // pokazujemy ilość poprawnych odpowiedzi w stosunku do wszystkich
         resultsContainer.innerHTML = 'Twój wynik: ' + numCorrect + ' na ' + questions.length;
+
+        var return_results = [];
+       return_results[0] = numCorrect;
+       return_results[1] = questions.length;
+       saveResults(return_results);
     }
 
-// po naciśnięciu przycisku submit, pokazujemy rezultaty quizu
+    // po naciśnięciu przycisku submit, pokazujemy rezultaty quizu
     submitButton.onclick = function () {
         showResults(questions, quizContainer, resultsContainer);
     }
-
 }
+
 // a teraz generujemy nasz quiz
 generateQuiz(questions, quizContainer, resultsContainer, submitButton);
+
+// teraz skupiamy się na zapisaniu wyników do local storage oraz wygenerowaniu rankingu
+function saveResults(result) {
+
+    var results = getResults();
+
+    // wyciągamy datę i godzinę, w których zostały zapisane wyniki rozgrywki do lokalstorage
+    var dateObj = new Date();
+    var month = dateObj.getUTCMonth() + 1; //months from 1-12
+    var day = dateObj.getUTCDate();
+    var year = dateObj.getUTCFullYear();
+
+    var seconds = dateObj.getSeconds();
+    var minutes = dateObj.getMinutes();
+    var hour = dateObj.getHours();
+
+    // ostateczny wygląd daty i godziny rozgrywki
+    var newDate = year + "/" + month + "/" + day + " " + hour + ":" + minutes + ":" + seconds;
+
+
+    result.unshift(newDate); // do zapisywanego wyniku rozgrywki wstawiamy na początek tablicy newDate
+
+    results.unshift(result); // do tablicy wyników wstawiamy na początek wynik ostatniej rozgrywki - result
+
+
+    // jeżeli do tablicy ma być zapisany czwarty element, to zostaje wyrzucona z niej ostatnia pozycja
+    // tablica z wynikami ma zawierać trzy ostatnie wyniki rozgrywek
+    if (results.length >= 11) {
+        results.pop();
+    }
+    // zapisujemy wyniki do lokalstorage
+    localStorage.results = JSON.stringify(results);
+}
+
+function getResults() {
+    var results;
+
+    if (!localStorage.results) {
+        results = [];
+    } else {
+        results = JSON.parse(localStorage.results);
+    }
+    return results;
+}
+
+// po naciśnięciu przycisku, pokazujemy ranking quizu
+  rankingButton.onclick = function () {
+
+    var ranking = getResults();
+
+    var line = "";
+
+    for  (var k = 0; k < ranking.length; k++) {
+        line += ranking[k][0] + " " + " " + "=" + " " + ranking[k][1] + " " + " " + "/" + " " + ranking[k][2] + "<br/>";
+    }
+    document.getElementById("gm-localstorage").innerHTML = line;
+};
+
