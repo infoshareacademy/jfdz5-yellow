@@ -189,6 +189,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         var start = document.getElementById('gm-start-button');
         var closeButton = document.getElementById('game-close');
         var currentSlide = 0;
+        var slideNumber = currentSlide+1;
         var timerInterval;
         var countDownStartDate;
         var slides;
@@ -241,7 +242,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
         function nextSlide() {
             currentSlide += 1;
-            console.log('jestesmy na slajdzie ' + currentSlide);
+            slideNumber = currentSlide+1;
+            console.log('jestesmy na slajdzie ' + slideNumber);
             goToSlide(currentSlide);
         }
 
@@ -281,6 +283,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             if (distance >= 5 * 1000) {
                 $('#gm-timer').text(seconds);
                 $('#gm-notice').text('time is running');
+                $('#gm-question-number').text('Pytanie ' + slideNumber + '/15');
             }
             else if (distance < 0) {
                 clearInterval(timerInterval);
@@ -302,6 +305,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             if (distance >= 5 * 1000) {
                 $('#gm-timer').text(seconds);
                 $('#gm-notice').text('time is running');
+                $('#gm-question-number').text('Pytanie ' + slideNumber + '/15');
             }
             else if (distance < 0) {
                 clearInterval(timerInterval);
@@ -309,6 +313,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 $('#gm-notice').removeClass('gm-red');
                 $('#gm-timer').text('Koniec czasu !!!');
                 $('#gm-notice').text('Dziękujemy za grę');
+                $('#gm-question-number').hide();
                 $('#gm-submit').show();
                 slides[currentSlide].className = 'gm-slide';
                 $('#gm-quiz').hide();
