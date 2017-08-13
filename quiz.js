@@ -418,7 +418,7 @@ function getResults() {
     var line = "";
 
     for  (var k = 0; k < ranking.length; k++) {
-        line += ranking[k][0] + " " + " " + "=" + " " + ranking[k][1] + " " + " " + "/" + " " + ranking[k][2] + "<br/>";
+        line += ' Gra z ' + ranking[k][0] + ', twój wynik to ' + " " + ranking[k][1] + " " + " " + "/" + " " + ranking[k][2] + "<br/>";
     }
     document.getElementById("gm-localstorage").innerHTML = line;
 };
