@@ -437,3 +437,12 @@ h5 {
 #gm-quiz label {
     font-weight: 400;
 }
+.carousel {
+    min-height: 450px;
+}
+.carousel-inner {
+    min-height: 450px;
+}
+.carousel-img {
+    min-height: 450px;
+}
